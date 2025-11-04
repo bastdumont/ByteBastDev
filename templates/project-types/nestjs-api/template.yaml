@@ -1,43 +1,54 @@
-name: "NestJS API"
+name: "NestJS REST API"
+description: "Production-ready NestJS API with PostgreSQL, TypeORM, and Swagger documentation"
 version: "1.0.0"
-description: "Production-ready NestJS REST API with PostgreSQL, TypeORM, and JWT authentication"
-author: "ByteClaude"
-category: "backend"
-tags:
-  - nestjs
-  - typescript
-  - postgresql
-  - typeorm
-  - rest-api
-
-technologies:
-  - NestJS
-  - TypeScript
-  - PostgreSQL
-  - TypeORM
-  - JWT Authentication
-  - Passport
-  - Swagger/OpenAPI
-  - Jest
+category: "backend-api"
+difficulty: "advanced"
 
 features:
-  - NestJS framework
-  - TypeScript
-  - PostgreSQL with TypeORM
-  - JWT authentication
-  - Role-based access control
-  - Swagger API documentation
-  - Request validation (class-validator)
-  - Error handling
-  - Logging with Winston
-  - Testing with Jest
-  - Docker support
+  - name: "NestJS Framework"
+    description: "Progressive Node.js framework for building server-side applications"
+  - name: "PostgreSQL Database"
+    description: "Relational database with TypeORM ORM"
+  - name: "Authentication"
+    description: "JWT-based authentication and authorization"
+  - name: "API Documentation"
+    description: "Swagger/OpenAPI documentation"
+  - name: "Validation"
+    description: "Request validation with class-validator"
+  - name: "Logging"
+    description: "Structured logging with Winston"
+
+technologies:
+  - name: "NestJS"
+    version: "10.0"
+    role: "Framework"
+  - name: "PostgreSQL"
+    version: "15"
+    role: "Database"
+  - name: "TypeORM"
+    version: "0.3"
+    role: "ORM"
+  - name: "TypeScript"
+    version: "5.3"
+    role: "Language"
+  - name: "Swagger"
+    version: "7.0"
+    role: "Documentation"
+  - name: "JWT"
+    version: "9.1"
+    role: "Authentication"
 
 commands:
   install: "npm install"
   dev: "npm run start:dev"
   build: "npm run build"
   start: "npm run start:prod"
-  test: "npm test"
-  test:watch: "npm run test:watch"
-  test:cov: "npm run test:cov"
+  test: "npm run test"
+  test:e2e: "npm run test:e2e"
+
+tags:
+  - "nestjs"
+  - "typescript"
+  - "rest-api"
+  - "postgresql"
+  - "production"
