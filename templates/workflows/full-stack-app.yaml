@@ -1,0 +1,128 @@
+# Example Workflow: Full-Stack Web Application
+# This is a template for creating full-stack applications
+
+workflow:
+  name: "full-stack-app"
+  description: "Complete full-stack web application with authentication, database, and payments"
+  version: "1.0.0"
+
+# Required technologies
+technologies:
+  frontend:
+    - react
+    - next.js
+    - tailwindcss
+  backend:
+    - mongodb
+    - express
+  services:
+    - stripe
+    - authentication
+
+# Execution phases
+phases:
+  - name: "setup"
+    description: "Project initialization and scaffolding"
+    tasks:
+      - create_directory_structure
+      - initialize_git
+      - create_package_json
+      - install_dependencies
+    
+  - name: "frontend"
+    description: "Frontend development"
+    dependencies: ["setup"]
+    parallel: true
+    tasks:
+      - create_components
+      - setup_routing
+      - implement_authentication_ui
+      - create_layouts
+      - apply_theme
+    skills:
+      - artifacts-builder
+      - theme-factory
+    context7:
+      - next.js
+      - react
+      - tailwindcss
+    
+  - name: "backend"
+    description: "Backend development"
+    dependencies: ["setup"]
+    parallel: true
+    tasks:
+      - setup_api_routes
+      - create_database_models
+      - implement_authentication
+      - setup_middleware
+    mcps:
+      - mongodb
+    context7:
+      - mongodb
+      - express
+    
+  - name: "integration"
+    description: "Service integration"
+    dependencies: ["frontend", "backend"]
+    tasks:
+      - integrate_stripe
+      - connect_frontend_backend
+      - setup_environment_variables
+    mcps:
+      - stripe
+    context7:
+      - stripe
+    
+  - name: "testing"
+    description: "Testing and validation"
+    dependencies: ["integration"]
+    tasks:
+      - generate_unit_tests
+      - generate_integration_tests
+      - run_tests
+    
+  - name: "documentation"
+    description: "Documentation generation"
+    dependencies: ["testing"]
+    tasks:
+      - generate_readme
+      - generate_api_docs
+      - create_deployment_guide
+    skills:
+      - docx
+
+# Output structure
+outputs:
+  structure:
+    - src/
+    - src/components/
+    - src/pages/
+    - src/lib/
+    - src/styles/
+    - api/
+    - api/routes/
+    - api/models/
+    - tests/
+    - docs/
+  
+  files:
+    - README.md
+    - package.json
+    - .env.example
+    - .gitignore
+    - tsconfig.json
+
+# Validation rules
+validation:
+  run_tests: true
+  test_coverage_threshold: 80
+  code_review: true
+  security_scan: false
+
+# Execution settings
+execution:
+  max_parallel_tasks: 3
+  continue_on_error: false
+  max_retries: 3
+  retry_delay: 5

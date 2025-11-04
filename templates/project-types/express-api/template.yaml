@@ -1,0 +1,41 @@
+name: "Express.js REST API"
+version: "1.0.0"
+description: "Production-ready Express.js REST API with MongoDB and JWT authentication"
+author: "ByteClaude"
+category: "backend"
+tags:
+  - express
+  - nodejs
+  - mongodb
+  - rest-api
+  - jwt
+
+technologies:
+  - Node.js 18+
+  - Express.js
+  - MongoDB with Mongoose
+  - TypeScript
+  - JWT Authentication
+  - Joi validation
+  - Winston logging
+
+features:
+  - RESTful API architecture
+  - MongoDB integration with Mongoose
+  - JWT authentication and authorization
+  - Request validation with Joi
+  - Error handling middleware
+  - Logging with Winston
+  - CORS configuration
+  - Rate limiting
+  - Helmet security headers
+  - Environment configuration
+  - API documentation with Swagger
+
+commands:
+  install: "npm install"
+  dev: "npm run dev"
+  build: "npm run build"
+  start: "npm start"
+  test: "npm test"
+  lint: "npm run lint"

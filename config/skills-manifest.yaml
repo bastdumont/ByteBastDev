@@ -1,0 +1,400 @@
+# Skills Manifest
+# Catalog of all available skills for the ByteClaude framework
+
+skills:
+  # Document Generation Skills
+  docx:
+    name: "DOCX Document Generator"
+    category: "document"
+    description: "Create and edit Microsoft Word documents"
+    version: "1.0.0"
+    path: "/mnt/skills/public/docx"
+    capabilities:
+      - create_document
+      - add_headings
+      - add_paragraphs
+      - add_tables
+      - add_images
+      - apply_styles
+      - export_pdf
+    input_formats: ["text", "markdown", "json"]
+    output_formats: ["docx", "pdf"]
+    dependencies: ["python-docx"]
+    examples:
+      - "Generate a project report"
+      - "Create meeting minutes"
+      - "Build a technical specification document"
+
+  pdf:
+    name: "PDF Generator"
+    category: "document"
+    description: "Generate PDF documents with advanced formatting"
+    version: "1.0.0"
+    path: "/mnt/skills/public/pdf"
+    capabilities:
+      - create_pdf
+      - add_text
+      - add_images
+      - add_charts
+      - add_tables
+      - add_headers_footers
+      - watermarks
+      - encryption
+    input_formats: ["text", "html", "markdown"]
+    output_formats: ["pdf"]
+    dependencies: ["reportlab", "PyPDF2"]
+    examples:
+      - "Generate invoices"
+      - "Create reports with charts"
+      - "Build presentations"
+
+  pptx:
+    name: "PowerPoint Generator"
+    category: "document"
+    description: "Create Microsoft PowerPoint presentations"
+    version: "1.0.0"
+    path: "/mnt/skills/public/pptx"
+    capabilities:
+      - create_presentation
+      - add_slides
+      - add_text_boxes
+      - add_images
+      - add_charts
+      - add_shapes
+      - apply_themes
+      - animations
+    input_formats: ["json", "yaml", "markdown"]
+    output_formats: ["pptx"]
+    dependencies: ["python-pptx"]
+    examples:
+      - "Create pitch decks"
+      - "Build training presentations"
+      - "Generate sales presentations"
+
+  xlsx:
+    name: "Excel Spreadsheet Generator"
+    category: "document"
+    description: "Create and manipulate Excel spreadsheets"
+    version: "1.0.0"
+    path: "/mnt/skills/public/xlsx"
+    capabilities:
+      - create_workbook
+      - add_sheets
+      - write_data
+      - create_formulas
+      - add_charts
+      - apply_formatting
+      - pivot_tables
+      - data_validation
+    input_formats: ["csv", "json", "python_dict"]
+    output_formats: ["xlsx", "csv"]
+    dependencies: ["openpyxl", "pandas"]
+    examples:
+      - "Generate financial reports"
+      - "Create data dashboards"
+      - "Build inventory sheets"
+
+  # Web Development Skills
+  artifacts-builder:
+    name: "Web Artifacts Builder"
+    category: "web"
+    description: "Build modern web applications and components"
+    version: "1.0.0"
+    path: "/mnt/skills/public/artifacts-builder"
+    capabilities:
+      - create_react_components
+      - create_vue_components
+      - create_html_pages
+      - add_interactivity
+      - responsive_design
+      - state_management
+      - routing
+      - api_integration
+    input_formats: ["json", "yaml"]
+    output_formats: ["jsx", "tsx", "vue", "html", "css"]
+    dependencies: ["react", "vue", "tailwindcss"]
+    examples:
+      - "Build a dashboard"
+      - "Create a landing page"
+      - "Generate form components"
+
+  # Design Skills
+  theme-factory:
+    name: "Theme Factory"
+    category: "design"
+    description: "Generate design themes and color schemes"
+    version: "1.0.0"
+    path: "/mnt/skills/public/theme-factory"
+    capabilities:
+      - generate_color_palettes
+      - create_css_themes
+      - tailwind_configs
+      - design_tokens
+      - dark_mode
+      - accessibility_compliance
+    input_formats: ["json", "yaml"]
+    output_formats: ["css", "scss", "json", "js"]
+    dependencies: ["tailwindcss", "postcss"]
+    examples:
+      - "Create a modern dark theme"
+      - "Generate accessible color palettes"
+      - "Build design system tokens"
+
+  canvas-design:
+    name: "Canvas Design Generator"
+    category: "design"
+    description: "Create visual designs and graphics"
+    version: "1.0.0"
+    path: "/mnt/skills/public/canvas-design"
+    capabilities:
+      - create_diagrams
+      - generate_charts
+      - create_mockups
+      - design_logos
+      - infographics
+      - social_media_graphics
+    input_formats: ["json", "yaml"]
+    output_formats: ["svg", "png", "pdf"]
+    dependencies: ["pillow", "cairo"]
+    examples:
+      - "Create architecture diagrams"
+      - "Generate social media posts"
+      - "Build infographics"
+
+  # Development Skills
+  mcp-builder:
+    name: "MCP Server Builder"
+    category: "development"
+    description: "Build Model Context Protocol servers"
+    version: "1.0.0"
+    path: "/mnt/skills/public/mcp-builder"
+    capabilities:
+      - scaffold_mcp_server
+      - define_tools
+      - define_resources
+      - add_authentication
+      - docker_configuration
+      - testing_setup
+    input_formats: ["json", "yaml"]
+    output_formats: ["python", "javascript", "typescript"]
+    dependencies: ["mcp", "fastapi", "pydantic"]
+    examples:
+      - "Build a custom API MCP"
+      - "Create database integration MCP"
+      - "Generate tool-calling MCP"
+
+  skill-creator:
+    name: "Skill Creator"
+    category: "meta"
+    description: "Create new skills for the framework"
+    version: "1.0.0"
+    path: "/mnt/skills/public/skill-creator"
+    capabilities:
+      - scaffold_skill
+      - define_capabilities
+      - create_documentation
+      - add_examples
+      - setup_testing
+    input_formats: ["json", "yaml", "markdown"]
+    output_formats: ["python", "markdown", "yaml"]
+    dependencies: []
+    examples:
+      - "Create a new document skill"
+      - "Build a custom integration skill"
+
+  # AI/ML Skills
+  ml-model-deployer:
+    name: "ML Model Deployer"
+    category: "ai_ml"
+    description: "Deploy machine learning models as APIs"
+    version: "1.0.0"
+    path: "/mnt/skills/public/ml-model-deployer"
+    capabilities:
+      - load_model
+      - create_api_endpoint
+      - add_preprocessing
+      - add_postprocessing
+      - model_versioning
+      - monitoring
+    input_formats: ["pickle", "h5", "onnx", "pytorch"]
+    output_formats: ["python", "docker"]
+    dependencies: ["fastapi", "torch", "tensorflow", "scikit-learn"]
+    examples:
+      - "Deploy a classification model"
+      - "Create prediction API"
+      - "Build ML microservice"
+
+  data-analyzer:
+    name: "Data Analyzer"
+    category: "data"
+    description: "Analyze and visualize data"
+    version: "1.0.0"
+    path: "/mnt/skills/public/data-analyzer"
+    capabilities:
+      - exploratory_analysis
+      - statistical_analysis
+      - data_visualization
+      - correlation_analysis
+      - trend_detection
+      - report_generation
+    input_formats: ["csv", "json", "excel", "parquet"]
+    output_formats: ["html", "pdf", "jupyter"]
+    dependencies: ["pandas", "matplotlib", "seaborn", "plotly"]
+    examples:
+      - "Analyze sales data"
+      - "Generate analytics report"
+      - "Visualize trends"
+
+  # Testing Skills
+  test-generator:
+    name: "Test Generator"
+    category: "testing"
+    description: "Generate comprehensive test suites"
+    version: "1.0.0"
+    path: "/mnt/skills/public/test-generator"
+    capabilities:
+      - unit_tests
+      - integration_tests
+      - e2e_tests
+      - mocking
+      - fixtures
+      - coverage_reports
+    input_formats: ["python", "javascript", "typescript"]
+    output_formats: ["python", "javascript", "typescript"]
+    dependencies: ["pytest", "jest", "playwright"]
+    examples:
+      - "Generate unit tests for API"
+      - "Create e2e test suite"
+      - "Build integration tests"
+
+  # DevOps Skills
+  docker-composer:
+    name: "Docker Composer"
+    category: "devops"
+    description: "Create Docker configurations"
+    version: "1.0.0"
+    path: "/mnt/skills/public/docker-composer"
+    capabilities:
+      - create_dockerfile
+      - docker_compose
+      - multi_stage_builds
+      - optimization
+      - security_best_practices
+    input_formats: ["yaml", "json"]
+    output_formats: ["dockerfile", "docker-compose.yml"]
+    dependencies: []
+    examples:
+      - "Dockerize a Node.js app"
+      - "Create microservices compose"
+      - "Build production Dockerfile"
+
+  ci-cd-builder:
+    name: "CI/CD Pipeline Builder"
+    category: "devops"
+    description: "Build CI/CD pipelines"
+    version: "1.0.0"
+    path: "/mnt/skills/public/ci-cd-builder"
+    capabilities:
+      - github_actions
+      - gitlab_ci
+      - jenkins_pipeline
+      - automated_testing
+      - deployment_automation
+    input_formats: ["yaml", "json"]
+    output_formats: ["yaml", "groovy"]
+    dependencies: []
+    examples:
+      - "Create GitHub Actions workflow"
+      - "Build deployment pipeline"
+      - "Setup automated testing"
+
+  # Database Skills
+  database-modeler:
+    name: "Database Schema Modeler"
+    category: "database"
+    description: "Design and generate database schemas"
+    version: "1.0.0"
+    path: "/mnt/skills/public/database-modeler"
+    capabilities:
+      - erd_design
+      - schema_generation
+      - migration_scripts
+      - seed_data
+      - relationships
+      - indexes
+    input_formats: ["json", "yaml"]
+    output_formats: ["sql", "mongodb", "prisma"]
+    dependencies: ["sqlalchemy", "alembic"]
+    examples:
+      - "Design e-commerce schema"
+      - "Create user management DB"
+      - "Build analytics database"
+
+# Skill Categories
+categories:
+  document:
+    description: "Document creation and manipulation"
+    icon: "📄"
+    skills: ["docx", "pdf", "pptx", "xlsx"]
+
+  web:
+    description: "Web development and components"
+    icon: "🌐"
+    skills: ["artifacts-builder"]
+
+  design:
+    description: "Design and visual creation"
+    icon: "🎨"
+    skills: ["theme-factory", "canvas-design"]
+
+  development:
+    description: "Software development tools"
+    icon: "💻"
+    skills: ["mcp-builder", "skill-creator"]
+
+  ai_ml:
+    description: "AI and machine learning"
+    icon: "🤖"
+    skills: ["ml-model-deployer", "data-analyzer"]
+
+  testing:
+    description: "Testing and quality assurance"
+    icon: "✅"
+    skills: ["test-generator"]
+
+  devops:
+    description: "DevOps and deployment"
+    icon: "🚀"
+    skills: ["docker-composer", "ci-cd-builder"]
+
+  database:
+    description: "Database design and management"
+    icon: "🗄️"
+    skills: ["database-modeler"]
+
+  meta:
+    description: "Framework extension skills"
+    icon: "⚙️"
+    skills: ["skill-creator"]
+
+# Skill Compatibility Matrix
+compatibility:
+  web_application:
+    recommended: ["artifacts-builder", "theme-factory", "test-generator"]
+    optional: ["docker-composer", "ci-cd-builder"]
+
+  document_generation:
+    recommended: ["docx", "pdf"]
+    optional: ["pptx", "xlsx", "canvas-design"]
+
+  api_development:
+    recommended: ["test-generator", "docker-composer"]
+    optional: ["database-modeler", "ci-cd-builder"]
+
+  data_pipeline:
+    recommended: ["data-analyzer", "database-modeler"]
+    optional: ["xlsx", "pdf"]
+
+  ml_deployment:
+    recommended: ["ml-model-deployer", "docker-composer"]
+    optional: ["test-generator", "ci-cd-builder"]

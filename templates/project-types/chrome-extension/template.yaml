@@ -1,0 +1,54 @@
+name: "Chrome Extension"
+version: "1.0.0"
+description: "Production-ready Chrome Extension with Manifest V3, TypeScript, and React"
+author: "ByteClaude"
+category: "browser-extension"
+tags:
+  - chrome
+  - extension
+  - typescript
+  - react
+  - manifest-v3
+
+technologies:
+  - Manifest V3
+  - TypeScript
+  - React 18
+  - Webpack
+  - Chrome Extension APIs
+  - Storage API
+  - Messaging API
+
+features:
+  - Manifest V3 compliant
+  - TypeScript for type safety
+  - React for popup UI
+  - Background service worker
+  - Content scripts
+  - Options page
+  - Chrome Storage API
+  - Message passing
+  - Context menus
+  - Keyboard shortcuts
+  - Hot reload in development
+
+structure:
+  src:
+    - popup: Popup UI (React)
+    - background: Background service worker
+    - content: Content scripts
+    - options: Options page
+    - utils: Utility functions
+  public:
+    - icons: Extension icons
+    - manifest.json: Extension manifest
+
+variables:
+  extension_name: "My Extension"
+  extension_id: "your-extension-id"
+
+commands:
+  install: "npm install"
+  dev: "npm run dev"
+  build: "npm run build"
+  watch: "npm run watch"

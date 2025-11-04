@@ -1,0 +1,50 @@
+name: "Python CLI Tool"
+version: "1.0.0"
+description: "Production-ready Python CLI tool with Click, argument parsing, and configuration"
+author: "ByteClaude"
+category: "cli-tool"
+tags:
+  - python
+  - cli
+  - click
+  - command-line
+
+technologies:
+  - Python 3.11+
+  - Click
+  - Rich (terminal formatting)
+  - Pydantic (configuration)
+  - PyYAML
+  - pytest
+
+features:
+  - Command-line interface with Click
+  - Subcommands and command groups
+  - Rich terminal output (colors, tables, progress bars)
+  - Configuration file support (YAML/JSON)
+  - Environment variable support
+  - Input validation
+  - Logging
+  - Error handling
+  - Testing with pytest
+  - Package distribution ready
+
+structure:
+  src:
+    - cli: CLI commands
+    - core: Core functionality
+    - utils: Utility functions
+    - config: Configuration management
+  tests: Test suite
+  docs: Documentation
+
+variables:
+  project_name: "my-cli"
+  command_name: "mycli"
+
+commands:
+  install: "pip install -e ."
+  dev: "python -m src.cli"
+  test: "pytest"
+  build: "python -m build"
+  publish: "twine upload dist/*"

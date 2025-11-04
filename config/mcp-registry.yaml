@@ -1,0 +1,242 @@
+# MCP Registry
+# Registry of available Model Context Protocol (MCP) integrations
+
+mcps:
+  # Database MCPs
+  mongodb:
+    name: "MongoDB"
+    category: "database"
+    description: "NoSQL database operations"
+    capabilities:
+      - connect
+      - query
+      - aggregate
+      - insert
+      - update
+      - delete
+      - schema_inspection
+    docker_required: true
+    authentication_required: true
+    
+  airtable:
+    name: "Airtable"
+    category: "database"
+    description: "Cloud spreadsheet database"
+    capabilities:
+      - list_bases
+      - list_tables
+      - list_records
+      - create_record
+      - update_records
+      - search_records
+    authentication_required: true
+  
+  # Payment Processing MCPs
+  stripe:
+    name: "Stripe"
+    category: "payment"
+    description: "Payment processing and billing"
+    capabilities:
+      - create_customer
+      - create_product
+      - create_price
+      - create_invoice
+      - list_customers
+      - list_products
+      - create_coupon
+      - manage_subscriptions
+    docker_required: true
+    authentication_required: true
+    test_mode_available: true
+  
+  # Productivity MCPs
+  notion:
+    name: "Notion"
+    category: "productivity"
+    description: "Workspace and documentation"
+    capabilities:
+      - create_page
+      - update_page
+      - create_database
+      - query_database
+      - search
+      - create_comment
+    docker_required: true
+    authentication_required: true
+  
+  hubspot:
+    name: "HubSpot"
+    category: "crm"
+    description: "CRM and marketing automation"
+    capabilities:
+      - get_user_details
+      - search_crm_objects
+      - get_crm_objects
+      - get_properties
+      - search_properties
+    authentication_required: true
+  
+  # File System MCPs
+  filesystem:
+    name: "Filesystem"
+    category: "file_system"
+    description: "Local file system operations"
+    capabilities:
+      - read_file
+      - write_file
+      - list_directory
+      - create_directory
+      - search_files
+      - move_file
+      - get_file_info
+    authentication_required: false
+  
+  # Browser Automation MCPs
+  chrome:
+    name: "Chrome Control"
+    category: "automation"
+    description: "Browser automation and control"
+    capabilities:
+      - open_url
+      - get_current_tab
+      - list_tabs
+      - close_tab
+      - execute_javascript
+      - get_page_content
+    authentication_required: false
+  
+  # System MCPs
+  mac_control:
+    name: "Mac Control"
+    category: "automation"
+    description: "macOS system automation"
+    capabilities:
+      - osascript
+    platform: "macos"
+    authentication_required: false
+  
+  # Communication MCPs
+  beeper:
+    name: "Beeper Desktop"
+    category: "communication"
+    description: "Unified messaging platform"
+    capabilities:
+      - focus_app
+      - search
+      - search_chats
+      - list_messages
+      - send_message
+    authentication_required: true
+  
+  # Documentation MCPs
+  context7:
+    name: "Context7"
+    category: "documentation"
+    description: "Library documentation retrieval"
+    capabilities:
+      - resolve_library_id
+      - get_library_docs
+    authentication_required: false
+  
+  # Media MCPs
+  youtube:
+    name: "YouTube"
+    category: "media"
+    description: "YouTube video transcript extraction"
+    capabilities:
+      - get_transcript
+      - get_timed_transcript
+      - get_video_info
+    docker_required: true
+    authentication_required: false
+  
+  # Web MCPs
+  web_search:
+    name: "Web Search"
+    category: "web"
+    description: "Search engine integration"
+    capabilities:
+      - search
+    authentication_required: false
+  
+  web_fetch:
+    name: "Web Fetch"
+    category: "web"
+    description: "Web page content retrieval"
+    capabilities:
+      - fetch
+    authentication_required: false
+
+# MCP Categories
+categories:
+  database:
+    description: "Database operations and data storage"
+    color: "#4CAF50"
+  
+  payment:
+    description: "Payment processing and billing"
+    color: "#2196F3"
+  
+  productivity:
+    description: "Productivity and collaboration tools"
+    color: "#FF9800"
+  
+  crm:
+    description: "Customer relationship management"
+    color: "#9C27B0"
+  
+  file_system:
+    description: "File and directory operations"
+    color: "#607D8B"
+  
+  automation:
+    description: "Browser and system automation"
+    color: "#00BCD4"
+  
+  communication:
+    description: "Messaging and communication"
+    color: "#E91E63"
+  
+  documentation:
+    description: "Documentation and knowledge management"
+    color: "#795548"
+  
+  media:
+    description: "Media processing and retrieval"
+    color: "#F44336"
+  
+  web:
+    description: "Web scraping and search"
+    color: "#3F51B5"
+
+# MCP Compatibility Matrix
+compatibility:
+  web_application:
+    recommended: [filesystem, web_search, context7]
+    optional: [mongodb, stripe, notion]
+  
+  document_generation:
+    recommended: [filesystem]
+    optional: [notion, airtable, web_search]
+  
+  api_integration:
+    recommended: [context7]
+    required_one_of: [mongodb, stripe, notion, airtable, hubspot]
+  
+  data_pipeline:
+    recommended: [filesystem]
+    required_one_of: [mongodb, airtable, notion]
+
+# Rate Limits (requests per minute)
+rate_limits:
+  notion: 180
+  airtable: 300
+  hubspot: 600
+  stripe: 600
+  context7: 60
+  web_search: 60
+
+# Docker Configuration
+docker:
+  required_for: [mongodb, stripe, notion, youtube]
+  compose_file: "./docker-compose.yml"

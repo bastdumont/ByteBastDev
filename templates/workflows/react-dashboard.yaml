@@ -1,0 +1,133 @@
+# React Dashboard Project Template
+# Template for creating data visualization dashboards
+
+project_type: "react-dashboard"
+category: "web_application"
+
+description: |
+  A modern React dashboard for data visualization with charts,
+  tables, and real-time updates.
+
+default_technologies:
+  - react
+  - recharts  # for charts
+  - tailwindcss
+  - mongodb  # optional backend
+
+features:
+  - responsive_design: true
+  - dark_mode: true
+  - authentication: optional
+  - real_time_updates: optional
+  - data_export: true
+  - charts_and_graphs: true
+
+directory_structure:
+  src:
+    - components/
+    - components/charts/
+    - components/dashboard/
+    - components/tables/
+    - pages/
+    - lib/
+    - styles/
+    - utils/
+  public:
+    - assets/
+    - images/
+
+files:
+  - name: "package.json"
+    template: "react-package.json"
+  
+  - name: "src/App.jsx"
+    template: "react-dashboard-app.jsx"
+  
+  - name: "src/components/Dashboard.jsx"
+    template: "dashboard-component.jsx"
+  
+  - name: "tailwind.config.js"
+    template: "tailwind-config.js"
+  
+  - name: "README.md"
+    template: "dashboard-readme.md"
+
+components:
+  - name: "Dashboard"
+    description: "Main dashboard container"
+    props:
+      - data: "array"
+      - title: "string"
+  
+  - name: "Chart"
+    description: "Reusable chart component"
+    props:
+      - data: "array"
+      - type: "string (line|bar|pie)"
+  
+  - name: "DataTable"
+    description: "Data table with sorting and filtering"
+    props:
+      - data: "array"
+      - columns: "array"
+  
+  - name: "MetricCard"
+    description: "KPI metric display card"
+    props:
+      - title: "string"
+      - value: "number"
+      - trend: "number"
+
+dependencies:
+  required:
+    - react: "^18.0.0"
+    - react-dom: "^18.0.0"
+    - recharts: "^2.5.0"
+    - tailwindcss: "^3.3.0"
+  
+  optional:
+    - axios: "^1.4.0"  # for API calls
+    - react-router-dom: "^6.11.0"  # for routing
+
+skills_needed:
+  - artifacts-builder
+  - theme-factory
+
+mcps_needed:
+  optional:
+    - mongodb  # if backend needed
+    - stripe   # if payments needed
+
+context7_libraries:
+  - react
+  - recharts
+  - tailwindcss
+
+customization_options:
+  theme:
+    default: "modern"
+    options:
+      - modern
+      - minimal
+      - bold
+  
+  layout:
+    default: "grid"
+    options:
+      - grid
+      - sidebar
+      - fullscreen
+  
+  chart_types:
+    - line
+    - bar
+    - pie
+    - area
+    - scatter
+
+estimated_completion_time: "5-10 minutes"
+
+example_usage: |
+  python orchestrator/main.py \
+    --task "Create a sales dashboard with revenue charts and customer metrics" \
+    --output-dir ./sales-dashboard

@@ -1,0 +1,40 @@
+name: "Vue.js SPA"
+version: "1.0.0"
+description: "Modern Vue 3 single-page application with Composition API, Pinia, and Vue Router"
+author: "ByteClaude"
+category: "web-application"
+tags:
+  - vue
+  - spa
+  - typescript
+  - pinia
+  - vue-router
+
+technologies:
+  - Vue 3
+  - TypeScript
+  - Vite
+  - Pinia (state management)
+  - Vue Router
+  - Tailwind CSS
+  - Axios
+
+features:
+  - Vue 3 Composition API
+  - TypeScript support
+  - Vite for fast development
+  - Pinia state management
+  - Vue Router for navigation
+  - Tailwind CSS styling
+  - API integration with Axios
+  - Form handling
+  - Component library
+  - Dark mode support
+  - Responsive design
+
+commands:
+  install: "npm install"
+  dev: "npm run dev"
+  build: "npm run build"
+  preview: "npm run preview"
+  lint: "npm run lint"

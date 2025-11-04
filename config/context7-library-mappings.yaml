@@ -1,0 +1,711 @@
+# Context7 Library Mappings
+# Maps common library names/keywords to Context7-compatible library IDs
+
+# Frontend Frameworks
+frontend_frameworks:
+  react:
+    context7_id: "/facebook/react"
+    aliases: ["reactjs", "react.js"]
+    topics:
+      - hooks
+      - components
+      - state-management
+      - routing
+      - performance
+
+  "next.js":
+    context7_id: "/vercel/next.js"
+    aliases: ["nextjs", "next"]
+    topics:
+      - routing
+      - api-routes
+      - server-components
+      - image-optimization
+      - deployment
+
+  vue:
+    context7_id: "/vuejs/vue"
+    aliases: ["vuejs", "vue.js"]
+    topics:
+      - composition-api
+      - components
+      - routing
+      - state-management
+      - reactivity
+
+  svelte:
+    context7_id: "/sveltejs/svelte"
+    aliases: ["sveltejs"]
+    topics:
+      - components
+      - stores
+      - animations
+      - transitions
+
+  angular:
+    context7_id: "/angular/angular"
+    aliases: ["angularjs"]
+    topics:
+      - components
+      - services
+      - routing
+      - forms
+      - dependency-injection
+
+# Backend Frameworks
+backend_frameworks:
+  express:
+    context7_id: "/expressjs/express"
+    aliases: ["express.js", "expressjs"]
+    topics:
+      - routing
+      - middleware
+      - error-handling
+      - api-design
+
+  fastapi:
+    context7_id: "/tiangolo/fastapi"
+    aliases: ["fast-api"]
+    topics:
+      - async
+      - pydantic
+      - openapi
+      - dependency-injection
+
+  django:
+    context7_id: "/django/django"
+    aliases: []
+    topics:
+      - models
+      - views
+      - templates
+      - admin
+      - orm
+
+  flask:
+    context7_id: "/pallets/flask"
+    aliases: []
+    topics:
+      - routing
+      - blueprints
+      - jinja2
+      - extensions
+
+  nestjs:
+    context7_id: "/nestjs/nest"
+    aliases: ["nest", "nest.js"]
+    topics:
+      - modules
+      - controllers
+      - providers
+      - middleware
+
+# Databases
+databases:
+  mongodb:
+    context7_id: "/mongodb/docs"
+    aliases: ["mongo"]
+    topics:
+      - queries
+      - aggregation
+      - indexes
+      - schema-design
+      - transactions
+
+  postgresql:
+    context7_id: "/postgres/postgres"
+    aliases: ["postgres", "psql"]
+    topics:
+      - queries
+      - indexes
+      - performance
+      - transactions
+      - json
+
+  mysql:
+    context7_id: "/mysql/mysql"
+    aliases: []
+    topics:
+      - queries
+      - optimization
+      - replication
+      - backup
+
+  redis:
+    context7_id: "/redis/redis"
+    aliases: []
+    topics:
+      - data-structures
+      - caching
+      - pub-sub
+      - persistence
+
+  prisma:
+    context7_id: "/prisma/prisma"
+    aliases: []
+    topics:
+      - schema
+      - queries
+      - migrations
+      - client
+
+# Payment & Commerce
+payment:
+  stripe:
+    context7_id: "/stripe/stripe-node"
+    aliases: ["stripe-js"]
+    topics:
+      - payments
+      - subscriptions
+      - webhooks
+      - checkout
+      - customer-portal
+
+  paypal:
+    context7_id: "/paypal/paypal-sdk"
+    aliases: []
+    topics:
+      - checkout
+      - subscriptions
+      - webhooks
+
+# UI Libraries
+ui_libraries:
+  tailwindcss:
+    context7_id: "/tailwindlabs/tailwindcss"
+    aliases: ["tailwind"]
+    topics:
+      - utilities
+      - customization
+      - responsive
+      - dark-mode
+      - plugins
+
+  "material-ui":
+    context7_id: "/mui/material-ui"
+    aliases: ["mui", "materialui"]
+    topics:
+      - components
+      - theming
+      - styling
+      - customization
+
+  chakra-ui:
+    context7_id: "/chakra-ui/chakra-ui"
+    aliases: ["chakra"]
+    topics:
+      - components
+      - theming
+      - accessibility
+      - responsive
+
+  "ant-design":
+    context7_id: "/ant-design/ant-design"
+    aliases: ["antd"]
+    topics:
+      - components
+      - forms
+      - tables
+      - icons
+
+# State Management
+state_management:
+  redux:
+    context7_id: "/reduxjs/redux"
+    aliases: []
+    topics:
+      - store
+      - reducers
+      - actions
+      - middleware
+      - toolkit
+
+  zustand:
+    context7_id: "/pmndrs/zustand"
+    aliases: []
+    topics:
+      - store
+      - middleware
+      - persistence
+
+  recoil:
+    context7_id: "/facebookexperimental/recoil"
+    aliases: []
+    topics:
+      - atoms
+      - selectors
+      - hooks
+
+  pinia:
+    context7_id: "/vuejs/pinia"
+    aliases: []
+    topics:
+      - stores
+      - actions
+      - getters
+
+# Testing
+testing:
+  jest:
+    context7_id: "/jestjs/jest"
+    aliases: []
+    topics:
+      - matchers
+      - mocking
+      - async
+      - configuration
+
+  vitest:
+    context7_id: "/vitest-dev/vitest"
+    aliases: []
+    topics:
+      - testing
+      - mocking
+      - coverage
+
+  pytest:
+    context7_id: "/pytest-dev/pytest"
+    aliases: []
+    topics:
+      - fixtures
+      - parametrize
+      - mocking
+      - plugins
+
+  playwright:
+    context7_id: "/microsoft/playwright"
+    aliases: []
+    topics:
+      - browser-automation
+      - testing
+      - debugging
+      - selectors
+
+  cypress:
+    context7_id: "/cypress-io/cypress"
+    aliases: []
+    topics:
+      - e2e-testing
+      - commands
+      - assertions
+      - fixtures
+
+# Build Tools
+build_tools:
+  vite:
+    context7_id: "/vitejs/vite"
+    aliases: []
+    topics:
+      - configuration
+      - plugins
+      - optimization
+      - ssr
+
+  webpack:
+    context7_id: "/webpack/webpack"
+    aliases: []
+    topics:
+      - loaders
+      - plugins
+      - optimization
+      - code-splitting
+
+  esbuild:
+    context7_id: "/evanw/esbuild"
+    aliases: []
+    topics:
+      - configuration
+      - plugins
+      - api
+
+  turbopack:
+    context7_id: "/vercel/turbo"
+    aliases: ["turbo"]
+    topics:
+      - bundling
+      - caching
+      - monorepos
+
+# DevOps & Cloud
+devops:
+  docker:
+    context7_id: "/docker/docker"
+    aliases: []
+    topics:
+      - dockerfile
+      - compose
+      - networking
+      - volumes
+      - optimization
+
+  kubernetes:
+    context7_id: "/kubernetes/kubernetes"
+    aliases: ["k8s"]
+    topics:
+      - pods
+      - services
+      - deployments
+      - configmaps
+      - ingress
+
+  terraform:
+    context7_id: "/hashicorp/terraform"
+    aliases: []
+    topics:
+      - providers
+      - modules
+      - state
+      - variables
+
+# TypeScript & Type Systems
+type_systems:
+  typescript:
+    context7_id: "/microsoft/typescript"
+    aliases: ["ts"]
+    topics:
+      - types
+      - interfaces
+      - generics
+      - decorators
+      - configuration
+
+  zod:
+    context7_id: "/colinhacks/zod"
+    aliases: []
+    topics:
+      - schema
+      - validation
+      - parsing
+      - types
+
+  yup:
+    context7_id: "/jquense/yup"
+    aliases: []
+    topics:
+      - validation
+      - schema
+      - transforms
+
+# Data Fetching
+data_fetching:
+  axios:
+    context7_id: "/axios/axios"
+    aliases: []
+    topics:
+      - requests
+      - interceptors
+      - configuration
+      - error-handling
+
+  "react-query":
+    context7_id: "/tanstack/query"
+    aliases: ["tanstack-query"]
+    topics:
+      - queries
+      - mutations
+      - caching
+      - optimistic-updates
+
+  swr:
+    context7_id: "/vercel/swr"
+    aliases: []
+    topics:
+      - fetching
+      - caching
+      - revalidation
+      - mutations
+
+  apollo:
+    context7_id: "/apollographql/apollo-client"
+    aliases: ["apollo-client"]
+    topics:
+      - queries
+      - mutations
+      - caching
+      - subscriptions
+
+# GraphQL
+graphql:
+  graphql:
+    context7_id: "/graphql/graphql-js"
+    aliases: []
+    topics:
+      - schema
+      - resolvers
+      - queries
+      - mutations
+
+  apollo-server:
+    context7_id: "/apollographql/apollo-server"
+    aliases: []
+    topics:
+      - setup
+      - resolvers
+      - context
+      - plugins
+
+# Mobile Development
+mobile:
+  "react-native":
+    context7_id: "/facebook/react-native"
+    aliases: ["reactnative"]
+    topics:
+      - components
+      - navigation
+      - styling
+      - platform-specific
+
+  expo:
+    context7_id: "/expo/expo"
+    aliases: []
+    topics:
+      - setup
+      - apis
+      - build
+      - deployment
+
+  flutter:
+    context7_id: "/flutter/flutter"
+    aliases: []
+    topics:
+      - widgets
+      - state-management
+      - navigation
+      - platform-channels
+
+# AI/ML
+ai_ml:
+  tensorflow:
+    context7_id: "/tensorflow/tensorflow"
+    aliases: ["tf"]
+    topics:
+      - models
+      - training
+      - keras
+      - deployment
+
+  pytorch:
+    context7_id: "/pytorch/pytorch"
+    aliases: []
+    topics:
+      - tensors
+      - models
+      - training
+      - optimization
+
+  langchain:
+    context7_id: "/langchain-ai/langchain"
+    aliases: []
+    topics:
+      - chains
+      - agents
+      - memory
+      - tools
+
+  openai:
+    context7_id: "/openai/openai-node"
+    aliases: ["openai-api"]
+    topics:
+      - chat
+      - completions
+      - embeddings
+      - fine-tuning
+
+# Authentication
+auth:
+  "next-auth":
+    context7_id: "/nextauthjs/next-auth"
+    aliases: ["nextauth"]
+    topics:
+      - providers
+      - callbacks
+      - session
+      - jwt
+
+  passport:
+    context7_id: "/jaredhanson/passport"
+    aliases: []
+    topics:
+      - strategies
+      - authentication
+      - session
+
+  clerk:
+    context7_id: "/clerkinc/javascript"
+    aliases: []
+    topics:
+      - setup
+      - components
+      - webhooks
+      - user-management
+
+# CMS & Content
+cms:
+  contentful:
+    context7_id: "/contentful/contentful.js"
+    aliases: []
+    topics:
+      - content-types
+      - queries
+      - rich-text
+      - assets
+
+  sanity:
+    context7_id: "/sanity-io/sanity"
+    aliases: []
+    topics:
+      - schemas
+      - groq
+      - client
+      - studio
+
+  strapi:
+    context7_id: "/strapi/strapi"
+    aliases: []
+    topics:
+      - content-types
+      - api
+      - plugins
+      - customization
+
+# Data Visualization
+visualization:
+  "d3.js":
+    context7_id: "/d3/d3"
+    aliases: ["d3"]
+    topics:
+      - selections
+      - scales
+      - shapes
+      - transitions
+
+  recharts:
+    context7_id: "/recharts/recharts"
+    aliases: []
+    topics:
+      - charts
+      - components
+      - customization
+
+  "chart.js":
+    context7_id: "/chartjs/chart.js"
+    aliases: ["chartjs"]
+    topics:
+      - charts
+      - configuration
+      - plugins
+
+# Forms
+forms:
+  "react-hook-form":
+    context7_id: "/react-hook-form/react-hook-form"
+    aliases: ["rhf"]
+    topics:
+      - validation
+      - performance
+      - integration
+      - typescript
+
+  formik:
+    context7_id: "/jaredpalmer/formik"
+    aliases: []
+    topics:
+      - validation
+      - field-management
+      - submission
+
+# Utility Libraries
+utilities:
+  lodash:
+    context7_id: "/lodash/lodash"
+    aliases: []
+    topics:
+      - array
+      - object
+      - collection
+      - function
+
+  dayjs:
+    context7_id: "/iamkun/dayjs"
+    aliases: []
+    topics:
+      - parsing
+      - formatting
+      - manipulation
+      - timezone
+
+  date-fns:
+    context7_id: "/date-fns/date-fns"
+    aliases: []
+    topics:
+      - parsing
+      - formatting
+      - manipulation
+      - utilities
+
+# Real-time
+realtime:
+  "socket.io":
+    context7_id: "/socketio/socket.io"
+    aliases: ["socketio"]
+    topics:
+      - events
+      - rooms
+      - namespaces
+      - middleware
+
+  pusher:
+    context7_id: "/pusher/pusher-js"
+    aliases: []
+    topics:
+      - channels
+      - events
+      - presence
+      - authentication
+
+# Mapping Priorities
+priority_mappings:
+  high_usage:
+    - react
+    - next.js
+    - typescript
+    - tailwindcss
+    - mongodb
+    - stripe
+    - express
+    - fastapi
+
+  trending:
+    - vitest
+    - zustand
+    - zod
+    - drizzle
+    - bun
+    - astro
+
+# Auto-detection Keywords
+auto_detection:
+  web_app:
+    - frontend_frameworks
+    - ui_libraries
+    - state_management
+
+  api:
+    - backend_frameworks
+    - databases
+    - auth
+
+  fullstack:
+    - frontend_frameworks
+    - backend_frameworks
+    - databases
+    - auth
+
+  mobile:
+    - mobile
+    - state_management
+
+  data:
+    - databases
+    - visualization
+    - ai_ml

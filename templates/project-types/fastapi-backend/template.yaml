@@ -1,0 +1,63 @@
+name: "FastAPI Backend"
+version: "1.0.0"
+description: "Production-ready FastAPI backend with MongoDB, authentication, and async operations"
+author: "ByteClaude"
+category: "backend"
+tags:
+  - fastapi
+  - python
+  - mongodb
+  - rest-api
+  - async
+
+technologies:
+  - Python 3.11+
+  - FastAPI
+  - MongoDB
+  - Motor (async MongoDB driver)
+  - Pydantic V2
+  - JWT Authentication
+  - Bcrypt
+  - Python-multipart
+  - CORS
+
+features:
+  - RESTful API architecture
+  - Async/await throughout
+  - MongoDB integration with Motor
+  - JWT authentication
+  - Role-based access control (RBAC)
+  - Request validation with Pydantic
+  - API documentation (Swagger/OpenAPI)
+  - CORS configuration
+  - Environment-based configuration
+  - Structured logging
+  - Error handling middleware
+  - Health check endpoint
+  - Database migrations
+
+structure:
+  app:
+    - api: API routes
+    - core: Core configuration
+    - models: Pydantic models
+    - schemas: Request/response schemas
+    - services: Business logic
+    - utils: Utility functions
+    - middleware: Custom middleware
+  tests: Test suite
+  alembic: Database migrations
+
+variables:
+  project_name: "my-api"
+  mongodb_url: "mongodb://localhost:27017"
+  database_name: "mydb"
+  secret_key: "your-secret-key-here"
+
+commands:
+  install: "pip install -r requirements.txt"
+  dev: "uvicorn app.main:app --reload"
+  prod: "uvicorn app.main:app --host 0.0.0.0 --port 8000"
+  test: "pytest"
+  lint: "ruff check ."
+  format: "black ."

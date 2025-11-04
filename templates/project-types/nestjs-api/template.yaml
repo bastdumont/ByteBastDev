@@ -1,0 +1,43 @@
+name: "NestJS API"
+version: "1.0.0"
+description: "Production-ready NestJS REST API with PostgreSQL, TypeORM, and JWT authentication"
+author: "ByteClaude"
+category: "backend"
+tags:
+  - nestjs
+  - typescript
+  - postgresql
+  - typeorm
+  - rest-api
+
+technologies:
+  - NestJS
+  - TypeScript
+  - PostgreSQL
+  - TypeORM
+  - JWT Authentication
+  - Passport
+  - Swagger/OpenAPI
+  - Jest
+
+features:
+  - NestJS framework
+  - TypeScript
+  - PostgreSQL with TypeORM
+  - JWT authentication
+  - Role-based access control
+  - Swagger API documentation
+  - Request validation (class-validator)
+  - Error handling
+  - Logging with Winston
+  - Testing with Jest
+  - Docker support
+
+commands:
+  install: "npm install"
+  dev: "npm run start:dev"
+  build: "npm run build"
+  start: "npm run start:prod"
+  test: "npm test"
+  test:watch: "npm run test:watch"
+  test:cov: "npm run test:cov"

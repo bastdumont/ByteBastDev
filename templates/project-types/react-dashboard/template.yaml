@@ -1,0 +1,56 @@
+name: "React Dashboard"
+version: "1.0.0"
+description: "Modern React dashboard with charts, tables, and data visualization"
+author: "ByteClaude"
+category: "web-application"
+tags:
+  - react
+  - dashboard
+  - charts
+  - data-visualization
+  - typescript
+
+technologies:
+  - React 18
+  - TypeScript
+  - Vite
+  - Tailwind CSS
+  - Recharts
+  - TanStack Table
+  - TanStack Query
+  - Zustand
+  - React Router
+
+features:
+  - Modern dashboard layout with sidebar
+  - Interactive charts and graphs
+  - Data tables with sorting, filtering, pagination
+  - Dark mode support
+  - Responsive design
+  - State management with Zustand
+  - Data fetching with TanStack Query
+  - Routing with React Router
+  - Form handling with React Hook Form
+  - Toast notifications
+
+structure:
+  src:
+    - components: Reusable components
+    - pages: Page components
+    - layouts: Layout components
+    - lib: Utility functions
+    - hooks: Custom React hooks
+    - store: Zustand stores
+    - types: TypeScript types
+    - api: API clients
+
+variables:
+  project_name: "my-dashboard"
+  api_url: "http://localhost:3001/api"
+
+commands:
+  install: "npm install"
+  dev: "npm run dev"
+  build: "npm run build"
+  preview: "npm run preview"
+  lint: "npm run lint"

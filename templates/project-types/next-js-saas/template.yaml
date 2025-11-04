@@ -1,0 +1,68 @@
+name: "Next.js SaaS Starter"
+version: "1.0.0"
+description: "Production-ready Next.js SaaS application with authentication, payments, and dashboard"
+author: "ByteClaude"
+category: "web-application"
+tags:
+  - nextjs
+  - react
+  - saas
+  - stripe
+  - authentication
+  - typescript
+
+technologies:
+  - Next.js 14
+  - React 18
+  - TypeScript
+  - Tailwind CSS
+  - Stripe
+  - NextAuth.js
+  - Prisma
+  - PostgreSQL
+
+features:
+  - Landing page with hero, features, pricing sections
+  - User authentication (email/password, OAuth)
+  - User dashboard
+  - Subscription management with Stripe
+  - Admin panel
+  - API routes
+  - Database integration with Prisma
+  - Email notifications
+  - SEO optimization
+  - Responsive design
+
+structure:
+  app:
+    - (auth): Authentication pages
+    - (dashboard): Protected dashboard pages
+    - (marketing): Public marketing pages
+    - api: API routes
+  components:
+    - ui: Reusable UI components
+    - auth: Authentication components
+    - dashboard: Dashboard components
+    - marketing: Marketing components
+  lib:
+    - db: Database client
+    - auth: Authentication utilities
+    - stripe: Stripe integration
+    - email: Email utilities
+  config:
+    - site.ts: Site configuration
+    - subscriptions.ts: Subscription plans
+
+variables:
+  project_name: "my-saas"
+  database_url: "postgresql://user:password@localhost:5432/mydb"
+  stripe_api_key: "sk_test_..."
+  nextauth_secret: "your-secret-here"
+
+commands:
+  install: "npm install"
+  dev: "npm run dev"
+  build: "npm run build"
+  start: "npm start"
+  db:setup: "npx prisma migrate dev"
+  db:seed: "npx prisma db seed"

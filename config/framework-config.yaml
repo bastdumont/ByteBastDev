@@ -1,0 +1,261 @@
+# ByteClaude Framework Configuration
+# Main configuration file for the automated development framework
+
+framework:
+  version: "1.0.0"
+  name: "ByteClaude"
+  description: "AI-powered automated development framework"
+  claude_code_enabled: true
+  max_parallel_tasks: 5
+  enable_checkpoints: true
+  checkpoint_interval: 300  # seconds
+
+# Context7 Documentation Integration
+context7:
+  enabled: true
+  cache_documentation: true
+  cache_ttl: 3600  # 1 hour
+  cache_directory: "./cache/context7"
+  max_tokens_per_query: 10000
+  rate_limit: 60  # requests per minute
+  default_topic: "getting-started"
+
+# MCP (Model Context Protocol) Configuration
+mcps:
+  auto_discover: true
+  registry_path: "./config/mcp-registry.yaml"
+  connection_timeout: 30
+  request_timeout: 60
+  retry_attempts: 3
+  retry_delay: 5
+
+# Skills Configuration
+skills:
+  base_path: "/mnt/skills"
+  fallback_path: "./skills"  # Local fallback
+  auto_load: true
+  manifest_path: "./config/skills-manifest.yaml"
+  cache_enabled: true
+
+# Execution Settings
+execution:
+  work_directory: "./workspace"
+  output_directory: "./output"
+  temp_directory: "./temp"
+  log_directory: "./logs"
+  checkpoint_directory: "./checkpoints"
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  save_checkpoints: true
+  continue_on_error: false
+  max_retries: 3
+  retry_delay: 5
+  timeout_per_task: 600  # 10 minutes
+
+# Validation Settings
+validation:
+  run_tests: true
+  code_review: true
+  security_scan: true
+  generate_docs: true
+  test_coverage_threshold: 80
+  max_file_size_mb: 100
+  allowed_file_extensions:
+    - .js
+    - .jsx
+    - .ts
+    - .tsx
+    - .py
+    - .java
+    - .go
+    - .rs
+    - .php
+    - .rb
+    - .md
+    - .json
+    - .yaml
+    - .yml
+    - .html
+    - .css
+    - .scss
+
+# Prompt Configuration
+prompts:
+  library_path: "./templates/prompts"
+  default_style: "expert"  # expert, beginner, concise
+  include_examples: true
+  include_documentation: true
+  max_context_length: 50000
+
+# Template Configuration
+templates:
+  project_types_path: "./templates/project-types"
+  workflows_path: "./templates/workflows"
+  boilerplates_path: "./templates/boilerplates"
+  custom_templates_path: "./templates/custom"
+  template_engine: "jinja2"
+  auto_format_code: true
+  preserve_comments: true
+
+# Code Generation Settings
+code_generation:
+  language_defaults:
+    javascript: "ES2022"
+    typescript: "5.0"
+    python: "3.11"
+    java: "17"
+    go: "1.21"
+  formatting:
+    javascript: "prettier"
+    typescript: "prettier"
+    python: "black"
+    go: "gofmt"
+  linting:
+    javascript: "eslint"
+    typescript: "eslint"
+    python: "flake8"
+  include_types: true
+  include_tests: true
+  include_documentation: true
+
+# Environment Profiles
+environment: "development"  # development, staging, production
+
+development:
+  verbose_logging: true
+  debug_mode: true
+  mock_external_apis: false
+  save_intermediate_files: true
+
+staging:
+  verbose_logging: false
+  debug_mode: false
+  mock_external_apis: false
+  save_intermediate_files: false
+
+production:
+  verbose_logging: false
+  debug_mode: false
+  mock_external_apis: false
+  save_intermediate_files: false
+  enable_monitoring: true
+  enable_analytics: false
+
+# Task Override Settings
+task_overrides:
+  web_application:
+    max_parallel_tasks: 3
+    include_tests: true
+    validation:
+      run_tests: true
+      code_review: true
+
+  document_generation:
+    validation:
+      code_review: false
+    execution:
+      timeout_per_task: 300
+
+  data_pipeline:
+    max_parallel_tasks: 5
+    execution:
+      timeout_per_task: 1200
+
+  api_integration:
+    execution:
+      max_retries: 5
+      timeout_per_task: 300
+
+# Plugin Configuration
+plugins:
+  enabled: true
+  plugins_directory: "./plugins"
+  auto_load: true
+  allowed_plugins:
+    - custom_tasks
+    - custom_mcps
+    - custom_skills
+    - formatters
+    - validators
+
+# Monitoring & Analytics
+monitoring:
+  enabled: false
+  collect_metrics: true
+  metrics_interval: 60
+  export_format: "json"
+
+analytics:
+  enabled: false
+  track_usage: false
+  anonymous: true
+
+# Security Settings
+security:
+  validate_inputs: true
+  sanitize_outputs: true
+  scan_dependencies: true
+  check_vulnerabilities: true
+  allowed_domains:
+    - "github.com"
+    - "npmjs.com"
+    - "pypi.org"
+    - "docs.anthropic.com"
+
+# Performance Settings
+performance:
+  enable_caching: true
+  cache_directory: "./cache"
+  max_cache_size_mb: 1000
+  enable_compression: true
+  parallel_io: true
+  thread_pool_size: 10
+
+# Error Handling
+error_handling:
+  capture_stack_traces: true
+  verbose_errors: true
+  retry_on_errors:
+    - "ConnectionError"
+    - "Timeout"
+    - "RateLimitError"
+  abort_on_errors:
+    - "AuthenticationError"
+    - "PermissionError"
+    - "InvalidSyntax"
+
+# Notification Settings
+notifications:
+  enabled: false
+  on_completion: true
+  on_error: true
+  channels:
+    - console
+    # - email
+    # - slack
+    # - discord
+
+# API Configuration
+api:
+  enabled: false
+  host: "localhost"
+  port: 8000
+  cors_enabled: true
+  auth_required: false
+
+# Feature Flags
+features:
+  enable_ai_code_review: true
+  enable_auto_optimization: true
+  enable_smart_suggestions: true
+  enable_workflow_visualization: true
+  enable_interactive_mode: true
+  enable_web_ui: false
+  enable_rest_api: false
+  enable_graphql_api: false
+
+# Experimental Features
+experimental:
+  enable_parallel_llm_calls: false
+  enable_code_evolution: false
+  enable_auto_refactoring: false
+  enable_predictive_planning: false
