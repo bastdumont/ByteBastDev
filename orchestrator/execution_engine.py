@@ -102,7 +102,8 @@ class ExecutionEngine:
             'theme-factory': self._execute_theme_skill,
             'mcp-builder': self._execute_mcp_builder_skill,
             'skill-creator': self._execute_skill_creator,
-            'canvas-design': self._execute_canvas_design
+            'canvas-design': self._execute_canvas_design,
+            'customer-persona-identification': self._execute_persona_skill
         }
     
     def _register_mcp_handlers(self) -> Dict[str, Callable]:
@@ -528,7 +529,54 @@ class ExecutionEngine:
             "status": "completed",
             "message": "Design created"
         }
-    
+
+    async def _execute_persona_skill(self, task: Task, requirement: Any) -> Any:
+        """Execute customer-persona-identification skill"""
+        self.logger.info(f"Executing customer persona identification for task: {task.task_id}")
+
+        # Extract parameters from task configuration
+        config = getattr(requirement, 'config', {}) if requirement else {}
+
+        # Initialize marketing skills adapter
+        try:
+            from integrations.skill_adapters import MarketingSkillsAdapter
+
+            adapter_config = {
+                'skills_path': '/mnt/skills',
+                'output_dir': str(self.context.output_directory)
+            }
+            adapter = MarketingSkillsAdapter(adapter_config)
+
+            # Execute persona identification
+            result = await adapter.identify_customer_personas(
+                company_overview=config.get('company_overview'),
+                products_services=config.get('products_services'),
+                target_markets=config.get('target_markets'),
+                evidence_sources=config.get('evidence_sources'),
+                constraints=config.get('constraints'),
+                strategic_goals=config.get('strategic_goals'),
+                max_personas=config.get('max_personas', 6)
+            )
+
+            self.logger.info(f"Persona identification completed: {result['summary']['total_personas']} personas generated")
+
+            return {
+                "status": "completed",
+                "personas": result['personas'],
+                "summary": result['summary'],
+                "gaps": result['gaps'],
+                "next_steps": result['next_steps'],
+                "message": f"Generated {result['summary']['total_personas']} customer personas"
+            }
+
+        except Exception as e:
+            self.logger.error(f"Error executing persona skill: {str(e)}")
+            return {
+                "status": "failed",
+                "error": str(e),
+                "message": "Failed to generate customer personas"
+            }
+
     # MCP Handlers
     
     async def _execute_mongodb_mcp(self, task: Task, requirement: Any) -> Any:

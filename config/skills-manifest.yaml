@@ -330,6 +330,49 @@ skills:
       - "Create user management DB"
       - "Build analytics database"
 
+  # Marketing Skills
+  customer-persona-identification:
+    name: "Customer Persona Identification"
+    category: "marketing"
+    description: "Identify, segment and prioritize customer personas from business data, market analysis, and customer evidence (CRM, interviews, analytics). Generate actionable persona cards with jobs-to-be-done, pains/gains, messaging, objections, channels, and ICP scoring."
+    version: "1.0.0"
+    path: "/mnt/skills/public/customer-persona-identification"
+    capabilities:
+      - identify_personas
+      - segment_customers
+      - jobs_to_be_done_analysis
+      - pain_gain_mapping
+      - message_map_creation
+      - objection_handling
+      - channel_prioritization
+      - icp_scoring
+      - persona_prioritization
+      - intent_signal_identification
+    input_formats: ["json", "yaml", "csv", "text"]
+    output_formats: ["json", "markdown", "pdf"]
+    dependencies: ["pandas", "pydantic"]
+    keywords:
+      - "persona"
+      - "buyer persona"
+      - "customer segment"
+      - "ICP"
+      - "ideal customer profile"
+      - "jobs to be done"
+      - "JTBD"
+      - "message market fit"
+      - "customer analysis"
+      - "market segmentation"
+      - "target audience"
+      - "customer profile"
+    examples:
+      - "Define buyer personas for B2B SaaS"
+      - "Identify ICP for enterprise product"
+      - "Create customer segments with messaging"
+      - "Build persona prioritization framework"
+      - "Generate jobs-to-be-done analysis"
+      - "Map customer objections and reassurances"
+      - "Prioritize market segments by potential"
+
 # Skill Categories
 categories:
   document:
@@ -377,6 +420,11 @@ categories:
     icon: "⚙️"
     skills: ["skill-creator"]
 
+  marketing:
+    description: "Marketing and customer analysis"
+    icon: "📊"
+    skills: ["customer-persona-identification"]
+
 # Skill Compatibility Matrix
 compatibility:
   web_application:
@@ -398,3 +446,7 @@ compatibility:
   ml_deployment:
     recommended: ["ml-model-deployer", "docker-composer"]
     optional: ["test-generator", "ci-cd-builder"]
+
+  customer_research:
+    recommended: ["customer-persona-identification", "data-analyzer"]
+    optional: ["xlsx", "pdf", "pptx"]

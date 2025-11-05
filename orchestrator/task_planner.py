@@ -184,7 +184,19 @@ class TaskPlanner:
             'spreadsheet': 'xlsx',
             'excel': 'xlsx',
             'web': 'artifacts-builder',
-            'react': 'artifacts-builder'
+            'react': 'artifacts-builder',
+            'persona': 'customer-persona-identification',
+            'buyer persona': 'customer-persona-identification',
+            'customer segment': 'customer-persona-identification',
+            'icp': 'customer-persona-identification',
+            'ideal customer profile': 'customer-persona-identification',
+            'jobs to be done': 'customer-persona-identification',
+            'jtbd': 'customer-persona-identification',
+            'message market fit': 'customer-persona-identification',
+            'customer analysis': 'customer-persona-identification',
+            'market segmentation': 'customer-persona-identification',
+            'target audience': 'customer-persona-identification',
+            'customer profile': 'customer-persona-identification'
         }
         
         request_lower = request.lower()
