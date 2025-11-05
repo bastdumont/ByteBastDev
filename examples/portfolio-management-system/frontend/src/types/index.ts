@@ -58,11 +58,12 @@ export interface StockHistory {
 }
 
 export interface PortfolioMetrics {
-  total_value: number;
-  total_cost: number;
-  total_gain_loss: number;
-  total_gain_loss_percent: number;
-  holdings_count: number;
+  // Backend returns these field names
+  current_value: number;
+  total_invested: number;
+  gain_loss: number;
+  gain_loss_percentage: number;
+  num_holdings: number;
   best_performer?: {
     symbol: string;
     gain_loss_percent: number;

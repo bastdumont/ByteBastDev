@@ -67,11 +67,14 @@ const AddHoldingForm: React.FC<AddHoldingFormProps> = ({
       return;
     }
 
+    // Convert date string to ISO datetime format (required by backend)
+    const purchaseDatetime = `${purchaseDate}T00:00:00`;
+
     const data: AddHoldingRequest = {
       symbol: selectedSymbol,
       quantity: parseFloat(quantity),
       purchase_price: parseFloat(purchasePrice),
-      purchase_date: purchaseDate,
+      purchase_date: purchaseDatetime,
     };
 
     onAdd(data);

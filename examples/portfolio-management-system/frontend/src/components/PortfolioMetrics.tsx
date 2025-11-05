@@ -37,7 +37,14 @@ const PortfolioMetrics: React.FC<PortfolioMetricsProps> = ({ portfolioId }) => {
     return null;
   }
 
-  const isPositive = metrics.total_gain_loss >= 0;
+  // Extract values from metrics (backend uses these field names)
+  const totalValue = metrics.current_value ?? 0;
+  const totalCost = metrics.total_invested ?? 0;
+  const gainLoss = metrics.gain_loss ?? 0;
+  const gainLossPercent = metrics.gain_loss_percentage ?? 0;
+  const holdingsCount = metrics.num_holdings ?? 0;
+
+  const isPositive = gainLoss >= 0;
 
   return (
     <div className="bg-white rounded-lg shadow p-6">
@@ -50,7 +57,7 @@ const PortfolioMetrics: React.FC<PortfolioMetricsProps> = ({ portfolioId }) => {
         <div className="bg-blue-50 rounded-lg p-4">
           <p className="text-sm text-blue-600 font-medium mb-1">Total Value</p>
           <p className="text-2xl font-bold text-blue-900">
-            ${metrics.total_value.toLocaleString(undefined, {
+            ${totalValue.toLocaleString(undefined, {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
             })}
@@ -61,7 +68,7 @@ const PortfolioMetrics: React.FC<PortfolioMetricsProps> = ({ portfolioId }) => {
         <div className="bg-gray-50 rounded-lg p-4">
           <p className="text-sm text-gray-600 font-medium mb-1">Total Cost</p>
           <p className="text-2xl font-bold text-gray-900">
-            ${metrics.total_cost.toLocaleString(undefined, {
+            ${totalCost.toLocaleString(undefined, {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
             })}
@@ -87,7 +94,7 @@ const PortfolioMetrics: React.FC<PortfolioMetricsProps> = ({ portfolioId }) => {
             }`}
           >
             {isPositive ? '+' : ''}$
-            {metrics.total_gain_loss.toLocaleString(undefined, {
+            {gainLoss.toLocaleString(undefined, {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
             })}
@@ -113,60 +120,15 @@ const PortfolioMetrics: React.FC<PortfolioMetricsProps> = ({ portfolioId }) => {
             }`}
           >
             {isPositive ? '+' : ''}
-            {metrics.total_gain_loss_percent.toFixed(2)}%
+            {gainLossPercent.toFixed(2)}%
           </p>
         </div>
       </div>
 
-      {/* Best/Worst Performers */}
-      {(metrics.best_performer || metrics.worst_performer) && (
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          {metrics.best_performer && (
-            <div className="bg-green-50 rounded-lg p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-green-600 font-medium mb-1">
-                    Best Performer
-                  </p>
-                  <p className="text-xl font-bold text-green-900">
-                    {metrics.best_performer.symbol}
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="text-2xl font-bold text-green-900">
-                    +{metrics.best_performer.gain_loss_percent.toFixed(2)}%
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {metrics.worst_performer && (
-            <div className="bg-red-50 rounded-lg p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-red-600 font-medium mb-1">
-                    Worst Performer
-                  </p>
-                  <p className="text-xl font-bold text-red-900">
-                    {metrics.worst_performer.symbol}
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="text-2xl font-bold text-red-900">
-                    {metrics.worst_performer.gain_loss_percent.toFixed(2)}%
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-
       {/* Holdings Count */}
       <div className="mt-4 pt-4 border-t border-gray-200">
         <p className="text-sm text-gray-600">
-          Total Holdings: <span className="font-semibold text-gray-900">{metrics.holdings_count}</span>
+          Total Holdings: <span className="font-semibold text-gray-900">{holdingsCount}</span>
         </p>
       </div>
     </div>
