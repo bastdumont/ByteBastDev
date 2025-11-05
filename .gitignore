@@ -65,3 +65,57 @@ htmlcov/
 .dmypy.json
 dmypy.json
 
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.eslintcache
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# React / Next.js
+.next/
+.cache/
+.parcel-cache
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# MongoDB
+mongodb_data/
+
+# Babel cache
+.cache/
+*.babel.json
+
+# OS files
+.DS_Store
+Thumbs.db
+.env.local
+.env.*.local
+
+# IDE specific
+.vscode/settings.json
+.idea/workspace.xml
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Example/test artifacts
+examples/portfolio-management-system/frontend/node_modules/
+examples/portfolio-management-system/backend/__pycache__/
+examples/portfolio-management-system/IMPLEMENTATION_COMPLETE.md
+
