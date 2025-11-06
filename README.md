@@ -1,6 +1,13 @@
 # Automated Microsoftware Development Framework
 ## Claude Code + Skills + MCPs + Context7 Integration
 
+[![Docs](https://img.shields.io/badge/docs-GitBook-blue)](gitbook/README.md)
+
+### Documentation
+
+- GitBook (hosted): REPLACE_WITH_PUBLISHED_URL
+- Local docs: [gitbook/README.md](gitbook/README.md)
+
 ### Overview
 This framework provides a fully automated development environment that combines:
 - **Claude Code**: Agentic coding capabilities

@@ -1,0 +1,69 @@
+{
+  "title": "ByteClaude - Automated Development Framework",
+  "description": "Complete documentation for ByteClaude - an AI-powered automated software development framework",
+  "author": "ByteClaude Team",
+  "isbn": "",
+  "language": "en",
+  "direction": "ltr",
+  "gitbook": ">=3.0.0",
+  "root": ".",
+  "links": {
+    "sidebar": {
+      "ByteClaude GitHub": "https://github.com/bastdumont/BalderFrameWork",
+      "Claude Code Docs": "https://docs.claude.com/en/docs/claude-code"
+    }
+  },
+  "plugins": [
+    "back-to-top-button",
+    "sharing",
+    "search-pro",
+    "github-buttons",
+    "expandable-chapters",
+    "highlight",
+    "code",
+    "table-of-contents",
+    "edit-link",
+    "copy-code-button"
+  ],
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "bastdumont",
+          "repo": "BalderFrameWork",
+          "type": "star",
+          "size": "large"
+        },
+        {
+          "user": "bastdumont",
+          "repo": "BalderFrameWork",
+          "type": "watch",
+          "size": "large"
+        }
+      ]
+    },
+    "sharing": {
+      "facebook": true,
+      "twitter": true,
+      "linkedin": true,
+      "weibo": false,
+      "all": [
+        "facebook",
+        "twitter",
+        "linkedin"
+      ]
+    },
+    "search-pro": {
+      "cutCharacterCount": 100,
+      "defineThreshold": 2,
+      "defineWord": true,
+      "hideKinds": []
+    },
+    "edit-link": {
+      "base": "https://github.com/bastdumont/BalderFrameWork/tree/master/gitbook",
+      "label": "Edit This Page"
+    },
+    "expandable-chapters": {}
+  }
+}
+
