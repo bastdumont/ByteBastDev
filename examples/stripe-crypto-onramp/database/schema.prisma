@@ -1,0 +1,178 @@
+// Prisma Schema for Crypto Onramp
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String   @id @default(uuid())
+  email             String   @unique
+  emailVerified     Boolean  @default(false)
+  password          String?
+  name              String?
+  kycLevel          Int      @default(0) // 0 = none, 1 = basic, 2 = enhanced
+  kycStatus         String   @default("not_started") // not_started, pending, approved, rejected
+  stripeCustomerId  String?  @unique
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  transactions      Transaction[]
+  kycVerifications  KYCVerification[]
+  wallets           Wallet[]
+  sessions          Session[]
+
+  @@index([email])
+  @@index([stripeCustomerId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  userId       String
+  token        String   @unique
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([token])
+}
+
+model Transaction {
+  id                      String   @id @default(uuid())
+  userId                  String
+  status                  String   // pending, payment_processing, payment_confirmed, crypto_purchasing, crypto_sending, completed, failed, refunded
+  fiatAmount              Decimal  @db.Decimal(10, 2)
+  fiatCurrency            String   // USD, EUR, GBP
+  cryptoAmount            Decimal  @db.Decimal(18, 8)
+  cryptoCurrency          String   // BTC, ETH, USDC, USDT
+  walletAddress           String
+  exchangeRate            Decimal  @db.Decimal(18, 8)
+  fees                    Json     // { stripe, platform, network, total }
+  stripePaymentIntentId   String?  @unique
+  txHash                  String?  // Blockchain transaction hash
+  confirmations           Int      @default(0)
+  estimatedDelivery       DateTime?
+  completedAt             DateTime?
+  failureReason           String?
+  metadata                Json?
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  user                    User     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([status])
+  @@index([stripePaymentIntentId])
+  @@index([txHash])
+  @@index([createdAt])
+}
+
+model KYCVerification {
+  id                String   @id @default(uuid())
+  userId            String
+  level             Int      // 1 = basic, 2 = enhanced
+  status            String   // pending, approved, rejected, expired
+  firstName         String?
+  lastName          String?
+  dateOfBirth       DateTime?
+  nationality       String?
+  address           Json?    // { street, city, state, zip, country }
+  documentType      String?  // passport, drivers_license, national_id
+  documentNumber    String?
+  documentFrontUrl  String?  // S3 URL
+  documentBackUrl   String?  // S3 URL
+  selfieUrl         String?  // S3 URL
+  proofOfAddressUrl String?  // S3 URL
+  provider          String?  // onfido, sumsub, manual
+  providerRef       String?  // External verification ID
+  rejectionReason   String?
+  verifiedAt        DateTime?
+  expiresAt         DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  user              User     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([status])
+  @@index([providerRef])
+}
+
+model Wallet {
+  id               String   @id @default(uuid())
+  userId           String
+  currency         String   // BTC, ETH, USDC, USDT
+  address          String
+  label            String?  // User-defined label
+  isDefault        Boolean  @default(false)
+  verified         Boolean  @default(false)
+  verifiedAt       DateTime?
+  lastUsed         DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  user             User     @relation(fields: [userId], references: [id])
+
+  @@unique([userId, address])
+  @@index([userId])
+  @@index([address])
+}
+
+model ExchangeRate {
+  id               String   @id @default(uuid())
+  cryptoCurrency   String
+  fiatCurrency     String
+  rate             Decimal  @db.Decimal(18, 8)
+  source           String   // coingecko, binance, coinmarketcap, aggregated
+  timestamp        DateTime @default(now())
+
+  @@unique([cryptoCurrency, fiatCurrency, timestamp])
+  @@index([cryptoCurrency, fiatCurrency])
+  @@index([timestamp])
+}
+
+model TransactionLimit {
+  id               String   @id @default(uuid())
+  userId           String   @unique
+  dailyLimit       Decimal  @db.Decimal(10, 2)
+  monthlyLimit     Decimal  @db.Decimal(10, 2)
+  dailySpent       Decimal  @db.Decimal(10, 2) @default(0)
+  monthlySpent     Decimal  @db.Decimal(10, 2) @default(0)
+  lastResetDaily   DateTime @default(now())
+  lastResetMonthly DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model AuditLog {
+  id               String   @id @default(uuid())
+  userId           String?
+  action           String   // login, transaction_created, kyc_submitted, payment_confirmed, etc.
+  entityType       String?  // transaction, user, kyc
+  entityId         String?
+  metadata         Json?
+  ipAddress        String?
+  userAgent        String?
+  timestamp        DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([timestamp])
+}
+
+model SystemConfig {
+  id               String   @id @default(uuid())
+  key              String   @unique
+  value            Json
+  description      String?
+  updatedAt        DateTime @updatedAt
+
+  @@index([key])
+}

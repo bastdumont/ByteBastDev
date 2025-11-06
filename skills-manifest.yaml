@@ -1,0 +1,539 @@
+# SEO Optimization Skill
+
+## Overview
+This skill enables Claude to provide comprehensive SEO optimization assistance including keyword research, content optimization, technical SEO analysis, meta tag generation, and competitive analysis.
+
+## When to Use This Skill
+Use this skill when the user needs help with:
+- Keyword research and analysis
+- Content optimization for search engines
+- Meta tags, titles, and descriptions
+- Technical SEO audits
+- Schema markup implementation
+- SEO content strategy
+- Competitive SEO analysis
+- Link building strategies
+- Local SEO optimization
+- Page speed and Core Web Vitals optimization
+
+## Core Capabilities
+
+### 1. Keyword Research & Analysis
+
+**Keyword Strategy Development:**
+- Identify primary, secondary, and long-tail keywords
+- Analyze search intent (informational, navigational, transactional, commercial)
+- Evaluate keyword difficulty and opportunity
+- Create semantic keyword clusters
+- Map keywords to content types and user journey stages
+
+**Keyword Metrics to Consider:**
+- Search volume (monthly searches)
+- Keyword difficulty (competition level)
+- Cost-per-click (CPC) for paid search context
+- Search intent alignment
+- SERP features (featured snippets, PAA, image packs)
+- Seasonal trends and patterns
+
+### 2. Content Optimization
+
+**On-Page SEO Elements:**
+```
+✓ Title Tag (50-60 characters, include primary keyword)
+✓ Meta Description (150-160 characters, compelling with CTA)
+✓ URL Structure (short, descriptive, keyword-rich)
+✓ Header Tags (H1-H6 hierarchy, keyword inclusion)
+✓ Image Alt Text (descriptive, include keywords when natural)
+✓ Internal Linking (contextual, anchor text optimization)
+✓ External Linking (authoritative sources, relevant)
+✓ Content Length (comprehensive, match search intent)
+✓ Keyword Density (natural usage, 1-2% for primary keyword)
+✓ LSI Keywords (semantic variations, related terms)
+```
+
+**Content Quality Factors:**
+- E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)
+- Readability (Flesch Reading Ease, grade level)
+- Content depth and comprehensiveness
+- Freshness and update frequency
+- Multimedia integration (images, videos, infographics)
+- User engagement signals (time on page, bounce rate)
+
+**Content Structure Best Practices:**
+1. **Introduction (100-150 words)**
+   - Hook with the main benefit or answer
+   - Include primary keyword naturally
+   - Set clear expectations for what's covered
+
+2. **Body Content**
+   - Use descriptive H2 and H3 subheadings
+   - Break up text with short paragraphs (2-4 sentences)
+   - Use bullet points and numbered lists
+   - Include examples, case studies, or data
+   - Add visual elements every 300-400 words
+
+3. **Conclusion**
+   - Summarize key takeaways
+   - Include a clear call-to-action
+   - Provide next steps or related resources
+
+### 3. Technical SEO
+
+**Site Architecture:**
+- XML sitemap optimization
+- Robots.txt configuration
+- Site speed optimization techniques
+- Mobile-first responsive design
+- HTTPS/SSL implementation
+- Canonical tag usage
+- Pagination handling
+- Hreflang for international SEO
+
+**Core Web Vitals:**
+- **LCP (Largest Contentful Paint):** < 2.5 seconds
+- **FID (First Input Delay):** < 100 milliseconds
+- **CLS (Cumulative Layout Shift):** < 0.1
+
+**Technical Checklist:**
+```
+□ Mobile-friendly test passed
+□ Page speed < 3 seconds
+□ No broken links (404 errors)
+□ Structured data implemented
+□ XML sitemap submitted
+□ No duplicate content issues
+□ Proper redirects (301 for permanent)
+□ HTTPS enabled site-wide
+□ Optimized images (WebP format, lazy loading)
+□ Minified CSS/JavaScript
+□ Browser caching enabled
+□ CDN implementation
+```
+
+### 4. Meta Tags & Structured Data
+
+**Essential Meta Tags Template:**
+```html
+<!-- Primary Meta Tags -->
+<title>Primary Keyword - Secondary Keyword | Brand Name</title>
+<meta name="title" content="Primary Keyword - Secondary Keyword | Brand Name">
+<meta name="description" content="Compelling description with primary keyword and clear value proposition (150-160 chars)">
+<meta name="keywords" content="primary, secondary, tertiary, keywords">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="author" content="Author Name">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.example.com/">
+<meta property="og:title" content="Primary Keyword - Secondary Keyword">
+<meta property="og:description" content="Compelling description for social sharing">
+<meta property="og:image" content="https://www.example.com/image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.example.com/">
+<meta property="twitter:title" content="Primary Keyword - Secondary Keyword">
+<meta property="twitter:description" content="Compelling description for social sharing">
+<meta property="twitter:image" content="https://www.example.com/image.jpg">
+
+<!-- Viewport for Responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+**Schema Markup Types:**
+- Article/BlogPosting
+- Product/Offer
+- LocalBusiness
+- Organization
+- BreadcrumbList
+- FAQ
+- HowTo
+- Review/AggregateRating
+- Event
+- Recipe
+
+**Example Schema.org JSON-LD (Article):**
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Article Title",
+  "image": ["https://example.com/image.jpg"],
+  "datePublished": "2025-01-15T08:00:00+00:00",
+  "dateModified": "2025-01-20T09:20:00+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Publisher Name",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/logo.jpg"
+    }
+  },
+  "description": "Article description"
+}
+```
+
+### 5. Link Building Strategies
+
+**White-Hat Link Building Tactics:**
+1. **Content Marketing**
+   - Create linkable assets (research, tools, infographics)
+   - Original research and data studies
+   - Comprehensive guides and resources
+   - Industry reports and whitepapers
+
+2. **Outreach Strategies**
+   - Guest posting on relevant sites
+   - Broken link building
+   - Resource page link building
+   - Expert roundups and interviews
+   - Testimonials for products/services used
+
+3. **Link Quality Factors**
+   - Domain Authority/Domain Rating
+   - Relevance to your niche
+   - Traffic potential
+   - Anchor text diversity
+   - Link placement (contextual vs. sidebar/footer)
+   - Do-follow vs. no-follow ratio
+
+### 6. Local SEO Optimization
+
+**Google Business Profile Optimization:**
+- Complete all profile sections (100% completion)
+- Accurate NAP (Name, Address, Phone) consistency
+- Business hours including special hours
+- High-quality photos (10+, updated regularly)
+- Service areas and categories
+- Regular posts and updates
+- Q&A section management
+- Review generation and responses
+
+**Local Citations:**
+- Yelp, Yellow Pages, Bing Places
+- Industry-specific directories
+- Local chamber of commerce
+- BBB (Better Business Bureau)
+- NAP consistency across all platforms
+
+**Local Content Strategy:**
+- Location-specific landing pages
+- Local events and news coverage
+- Community involvement content
+- Local schema markup
+- Geo-tagged images
+- Area-specific keywords
+
+### 7. SEO Content Brief Template
+
+When creating content briefs, include:
+
+```markdown
+## Content Brief: [Topic]
+
+### Target Keyword
+- Primary: [keyword] (Volume: X, Difficulty: Y)
+- Secondary: [keyword1], [keyword2], [keyword3]
+- Long-tail: [longer variations]
+
+### Search Intent
+[Informational/Navigational/Transactional/Commercial]
+
+### Target Audience
+[Define primary audience, pain points, expertise level]
+
+### Content Goals
+- Rank for target keywords
+- [Specific business goal]
+- [Engagement metric goal]
+
+### Content Specifications
+- Recommended Length: X-Y words
+- Tone: [Professional/Conversational/Technical]
+- Format: [Blog post/Guide/Comparison/Review]
+
+### Required Sections
+1. [H2 Heading] - Key points to cover
+2. [H2 Heading] - Key points to cover
+3. [H2 Heading] - Key points to cover
+
+### Competitive Analysis
+Top 3 Ranking URLs:
+1. [URL] - Strengths: X, Weaknesses: Y, Word Count: Z
+2. [URL] - Strengths: X, Weaknesses: Y, Word Count: Z
+3. [URL] - Strengths: X, Weaknesses: Y, Word Count: Z
+
+### Content Differentiation
+How this content will be better:
+- [Unique angle or data]
+- [More comprehensive coverage of X]
+- [Better visuals/examples]
+
+### On-Page SEO Checklist
+□ Title tag optimized
+□ Meta description compelling
+□ URL structure clean
+□ H1 includes primary keyword
+□ Internal links to 3-5 relevant pages
+□ External links to 2-3 authoritative sources
+□ Images with alt text
+□ Schema markup planned
+
+### Call-to-Action
+[What should users do after reading?]
+```
+
+### 8. SEO Audit Checklist
+
+**Crawlability & Indexability:**
+```
+□ Robots.txt configured correctly
+□ XML sitemap present and submitted
+□ No orphan pages (pages with no internal links)
+□ Logical site architecture (flat hierarchy)
+□ No redirect chains
+□ No broken internal/external links
+□ Proper use of noindex where needed
+□ Mobile-friendly design
+```
+
+**Content Quality:**
+```
+□ Unique, original content
+□ No thin content pages (<300 words)
+□ No duplicate content
+□ Content matches search intent
+□ Regular content updates
+□ Multimedia elements included
+□ Proper content formatting
+```
+
+**User Experience:**
+```
+□ Fast page load times
+□ Clear navigation
+□ Internal search functionality
+□ Breadcrumbs implemented
+□ Accessible design (WCAG compliance)
+□ Clear CTAs
+□ Mobile responsive
+```
+
+### 9. SEO Tools & Resources
+
+**Recommended Tools:**
+- **Keyword Research:** Google Keyword Planner, Ahrefs, SEMrush, Moz Keyword Explorer
+- **Technical SEO:** Google Search Console, Screaming Frog, Sitebulb
+- **Content Optimization:** Clearscope, Surfer SEO, MarketMuse
+- **Backlink Analysis:** Ahrefs, Majestic, Moz Link Explorer
+- **Page Speed:** Google PageSpeed Insights, GTmetrix, WebPageTest
+- **Schema Testing:** Google Rich Results Test, Schema.org Validator
+- **Mobile Testing:** Google Mobile-Friendly Test
+- **Analytics:** Google Analytics 4, Microsoft Clarity
+
+### 10. SEO Workflow Process
+
+**Phase 1: Research & Planning**
+1. Conduct keyword research
+2. Analyze competitor landscape
+3. Define target audience and intent
+4. Create content strategy and calendar
+5. Prioritize quick wins vs. long-term plays
+
+**Phase 2: On-Page Optimization**
+1. Optimize existing content
+2. Create new optimized content
+3. Implement technical SEO fixes
+4. Add structured data
+5. Improve internal linking
+
+**Phase 3: Off-Page SEO**
+1. Develop link building strategy
+2. Execute outreach campaigns
+3. Create linkable assets
+4. Build local citations (if applicable)
+5. Engage in community building
+
+**Phase 4: Monitoring & Iteration**
+1. Track keyword rankings
+2. Monitor organic traffic
+3. Analyze user behavior metrics
+4. Identify new opportunities
+5. Adjust strategy based on data
+
+## Best Practices
+
+### DO:
+✓ Focus on user intent and experience first
+✓ Create comprehensive, valuable content
+✓ Build natural, relevant links
+✓ Optimize for mobile-first
+✓ Use structured data appropriately
+✓ Monitor and adapt to algorithm updates
+✓ Maintain NAP consistency
+✓ Regularly update and refresh content
+✓ Use descriptive, keyword-rich URLs
+✓ Optimize images (size, format, alt text)
+
+### DON'T:
+✗ Keyword stuff content
+✗ Buy or exchange links unnaturally
+✗ Use black-hat tactics (cloaking, hidden text)
+✗ Create duplicate content
+✗ Ignore mobile optimization
+✗ Neglect technical SEO issues
+✗ Forget about page speed
+✗ Use generic or thin content
+✗ Ignore local SEO (if applicable)
+✗ Set unrealistic timeline expectations
+
+## Response Guidelines
+
+When helping with SEO optimization:
+
+1. **Always ask clarifying questions** if the scope is unclear:
+   - What is the target audience?
+   - What are the main business goals?
+   - What is the current state (existing site or new)?
+   - What is the competitive landscape?
+   - Any specific constraints (budget, timeline, technical)?
+
+2. **Provide actionable recommendations:**
+   - Be specific with implementation steps
+   - Prioritize tasks by impact and effort
+   - Include examples when helpful
+   - Explain the "why" behind recommendations
+
+3. **Consider holistic SEO:**
+   - Balance technical, on-page, and off-page factors
+   - Think about user experience, not just rankings
+   - Consider business goals alongside SEO metrics
+   - Account for industry-specific best practices
+
+4. **Set realistic expectations:**
+   - SEO takes time (typically 3-6 months for results)
+   - Competition affects timeline and difficulty
+   - Not all rankings are achievable or worth pursuing
+   - Focus on sustainable, white-hat practices
+
+## Common SEO Tasks
+
+### Generate Optimized Title Tags
+```
+Formula: [Primary Keyword] | [Secondary Benefit/Keyword] | [Brand]
+Length: 50-60 characters
+Include: Primary keyword near the beginning
+Make it: Compelling and click-worthy
+```
+
+### Generate Meta Descriptions
+```
+Formula: [Hook/Benefit] + [What content covers] + [Call-to-action]
+Length: 150-160 characters
+Include: Primary keyword naturally
+Make it: Compelling with clear value proposition
+```
+
+### Create URL Slugs
+```
+Format: lowercase-with-hyphens
+Include: Primary keyword
+Keep: Short (3-5 words ideal)
+Avoid: Stop words, special characters, dates (unless needed)
+```
+
+### Optimize Headings
+```
+H1: One per page, include primary keyword
+H2: Main sections, include primary and secondary keywords
+H3-H6: Subsections, use semantic variations
+Make them: Descriptive and scannable
+```
+
+## SEO Reporting Metrics
+
+**Key Metrics to Track:**
+- Organic traffic (sessions, users)
+- Keyword rankings (position changes)
+- Click-through rate (CTR) from SERPs
+- Organic conversions and conversion rate
+- Bounce rate and time on page
+- Pages per session
+- Backlink growth (quantity and quality)
+- Domain authority/rating trends
+- Core Web Vitals scores
+- Indexed pages count
+- Crawl errors
+
+**Monthly SEO Report Structure:**
+1. Executive Summary (wins, losses, priorities)
+2. Organic Traffic Performance
+3. Keyword Ranking Changes
+4. Technical SEO Health
+5. Content Performance
+6. Backlink Profile Update
+7. Competitive Landscape
+8. Action Items for Next Month
+
+## Industry-Specific Considerations
+
+### E-commerce SEO
+- Product page optimization
+- Category page optimization
+- Faceted navigation handling
+- Product schema markup
+- Review schema implementation
+- Out-of-stock page management
+- Seasonal content strategy
+
+### Local Business SEO
+- Google Business Profile optimization
+- Local citations and NAP consistency
+- Local schema markup
+- Location-specific landing pages
+- Local link building
+- Review generation and management
+
+### B2B SEO
+- Long sales cycle content mapping
+- Technical/industry-specific keywords
+- Thought leadership content
+- Case studies and testimonials
+- White papers and resources
+- Account-based marketing alignment
+
+### Blog/Content Sites
+- Content freshness and updates
+- Topic cluster strategy
+- Pillar page development
+- Editorial calendar optimization
+- Content promotion strategy
+- Affiliate link optimization (if applicable)
+
+## Staying Updated
+
+SEO is constantly evolving. Stay current with:
+- Google Search Central Blog
+- Core algorithm updates announcements
+- Search Engine Journal
+- Search Engine Land
+- Moz Blog
+- Ahrefs Blog
+- SEMrush Blog
+- Industry conferences (SMX, MozCon, Pubcon)
+
+## Conclusion
+
+This skill provides a comprehensive framework for SEO optimization. Always prioritize:
+1. User experience and value creation
+2. Technical excellence
+3. Natural, sustainable growth tactics
+4. Data-driven decision making
+5. Continuous learning and adaptation
+
+Remember: Good SEO is about creating the best possible experience for users while making it easy for search engines to understand and rank your content.

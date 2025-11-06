@@ -1,0 +1,63 @@
+name: "Base Mini Apps Starter"
+version: "1.0.0"
+description: "Quickly create and deploy mini applications for the Base App ecosystem"
+author: "ByteClaude"
+category: "web3-application"
+tags:
+  - base
+  - miniapp
+  - farcaster
+  - web3
+  - react
+  - typescript
+
+technologies:
+  - React 18
+  - TypeScript
+  - Vite
+  - Farcaster MiniApp SDK
+  - Tailwind CSS
+  - Base Chain
+
+features:
+  - Farcaster MiniApp SDK integration
+  - Base App manifest configuration
+  - Account association setup
+  - Embed metadata generation
+  - Responsive design optimized for mobile
+  - Base Account integration
+  - Webhook support for notifications
+  - Screenshot and preview image generation
+  - App categorization and tagging
+  - Production-ready deployment setup
+
+structure:
+  src:
+    - components: Reusable React components
+    - hooks: Custom React hooks for MiniApp SDK
+    - lib: Utility libraries and helpers
+    - pages: Application pages/routes
+    - styles: CSS/Tailwind styles
+  public:
+    - .well-known: Farcaster manifest and metadata
+    - images: App icons, screenshots, splash screens
+  api:
+    - webhook: Notification webhook handler
+
+variables:
+  project_name: "my-mini-app"
+  app_name: "My Mini App"
+  app_subtitle: "Fast, fun, social"
+  app_description: "A fast, fun mini app for Base"
+  app_domain: "your-domain.com"
+  base_account_address: "0x..."
+  primary_category: "social"
+  webhook_url: "https://your-domain.com/api/webhook"
+
+commands:
+  install: "npm install"
+  dev: "npm run dev"
+  build: "npm run build"
+  preview: "npm run preview"
+  type-check: "npm run type-check"
+  lint: "npm run lint"
