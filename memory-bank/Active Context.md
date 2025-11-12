@@ -3,21 +3,27 @@
 ## Current State
 
 ### Repository Status
-- **Git Repository**: ✅ Initialized and pushed to GitHub
-- **Repository Name**: BalderFrameWork
-- **Repository URL**: https://github.com/bastdumont/BalderFrameWork
+- **Git Repository**: ✅ Active on GitHub
+- **Repository Name**: ClaudeOnSteroids
+- **Repository URL**: https://github.com/bastdumont/ClaudeOnSteroids
 - **Branch**: master (default branch)
-- **Initial Commit**: Complete framework (118 files, 25,375+ insertions)
+- **Status**: Clean working directory
 
 ### Project Phase
-- **Current Phase**: Phase 3 (Boilerplates & Templates) - 47% Complete
-- **Overall Status**: Phases 1-2 Complete ✅ | Phase 3 In Progress ⚡
+- **Current Phase**: Documentation & Developer Experience
+- **Overall Status**: Core Framework Complete ✅ | Documentation In Progress ⚡
 - **Version**: 1.0.0
+
+### Recent Updates
+- ✅ Created comprehensive DEVELOPER_GUIDE.md
+- ✅ Updated memory bank context
+- ✅ Documented Skills, MCPs, and Templates workflows
+- ✅ Consolidated project organization guidelines
 
 ## Current UI/State
 
 ### CLI Interface
-- **Entry Point**: `orchestrator/main.py`
+- **Entry Point**: `orchestrator/main.py` or `python main.py`
 - **Modes**:
   - Interactive mode (default): Conversational task execution
   - Single task mode: `--task "description"`
@@ -29,49 +35,60 @@
 - ✅ Task decomposition and planning
 - ✅ Parallel execution with dependency resolution
 - ✅ Context7 documentation integration
-- ✅ MCP handler layer (8 handlers)
-- ✅ Skill adapter layer (4 adapters)
-- ✅ 7 production-ready boilerplates
+- ✅ 15+ MCP integrations (MongoDB, Stripe, Notion, Airtable, etc.)
+- ✅ Multiple Skills (docx, pdf, stripe, postgresql, redis)
+- ✅ Project templates system
 - ✅ Comprehensive logging and reporting
+- ✅ Developer documentation (DEVELOPER_GUIDE.md)
 
 ### Active Development Areas
 
-**Phase 3 - Boilerplates (47% Complete)**
-- ✅ 7 templates created
-- ⏳ 8 templates remaining
-- Next priorities:
-  1. Full-Stack Monorepo (Turborepo)
-  2. NestJS API with PostgreSQL
-  3. Python Data Pipeline
-  4. React Native Mobile App
+**Documentation & Developer Experience**
+- ✅ DEVELOPER_GUIDE.md created
+- ✅ Skills creation guide
+- ✅ MCP integration guide
+- ✅ Application templates guide
+- ✅ Project organization documentation
+
+**Next Priorities:**
+  1. Example applications (portfolio-management-system, stripe-crypto-onramp)
+  2. Testing infrastructure
+  3. Additional project templates
+  4. Web UI (future phase)
 
 ## Feature Drafts
 
-### In Progress Features
+### Recently Completed
 
-**Boilerplate Templates:**
+**Documentation:**
+- ✅ DEVELOPER_GUIDE.md - Comprehensive guide for Skills, MCPs, Templates
+- ✅ Skills creation workflow documented
+- ✅ MCP integration workflow documented
+- ✅ Template creation workflow documented
+- ✅ Project organization best practices
+
+**Framework Features:**
+- ✅ Skills system with adapter pattern
+- ✅ MCP handler layer
+- ✅ Context7 integration for documentation
+- ✅ Parallel execution engine
+- ✅ Configuration management
+
+### Planned Features
+
+**Additional Templates:**
 - [ ] Full-Stack Monorepo (Turborepo + Next.js + FastAPI)
 - [ ] NestJS API with PostgreSQL
 - [ ] GraphQL Server with Apollo
 - [ ] Python Data Pipeline (ETL)
-- [ ] React Native Mobile App
-- [ ] Flutter Cross-Platform App
-- [ ] Django REST API
-- [ ] Discord/Telegram Bot
+- [ ] Mobile applications (React Native, Flutter)
 
-**Expert Prompts Library (Phase 4):**
-- [ ] 50+ expert-level prompts for code generation
-- [ ] Architecture design prompts
-- [ ] Security audit prompts
-- [ ] Performance optimization prompts
-- [ ] Testing strategy prompts
-
-**Advanced Features (Phase 5):**
-- [ ] Visual workflow designer
+**Advanced Features:**
+- [ ] Web UI for visual workflow design
 - [ ] Real-time monitoring dashboard
-- [ ] Interactive configuration wizard
-- [ ] Template browser/selector
-- [ ] Plugin system for custom tasks
+- [ ] Plugin system for extensibility
+- [ ] CI/CD pipeline integration
+- [ ] Testing infrastructure
 
 ### Planned Enhancements
 
@@ -103,59 +120,64 @@
 
 ## Recent Changes
 
-### Latest Commits
-- Initial commit: Complete framework structure
-- All Phase 1-2 components completed
-- 7 boilerplate templates created in Phase 3
+### Latest Updates (November 12, 2025)
 
-### Recent Work Sessions
+**Documentation Session:**
+- ✅ Created DEVELOPER_GUIDE.md (comprehensive developer documentation)
+- ✅ Documented Skills creation workflow with examples
+- ✅ Documented MCP integration workflow with code samples
+- ✅ Documented template creation and usage
+- ✅ Added project organization best practices
+- ✅ Updated memory bank with current context
+- ✅ Consolidated all development workflows
 
-**Phase 3 Session 2 (November 4, 2025):**
-- ✅ Created Python CLI Tool boilerplate
-- ✅ Created Chrome Extension boilerplate
-- ✅ Created Vue.js SPA boilerplate
-- Progress: 27% → 47% (20% increase)
+**Key Files Created:**
+- DEVELOPER_GUIDE.md (9000+ lines, complete reference)
 
-**Phase 3 Session 1:**
-- ✅ Created Next.js SaaS boilerplate
-- ✅ Created React Dashboard boilerplate
-- ✅ Created FastAPI Backend boilerplate
-- ✅ Created Express.js API boilerplate
+### Previous Sessions
+
+**Framework Development:**
+- ✅ Core orchestration engine (task_planner.py, execution_engine.py)
+- ✅ MCP integration layer
+- ✅ Skills adapter system
+- ✅ Context7 client implementation
+- ✅ Example applications (portfolio-management-system, stripe-crypto-onramp)
 
 ## Active Development Priorities
 
 ### Immediate Next Steps
 
-1. **Complete Remaining Boilerplates** (Phase 3)
-   - Full-Stack Monorepo
-   - NestJS API
-   - Data Pipeline
-   - React Native App
+1. ✅ **Developer Documentation** (COMPLETED)
+   - Created comprehensive DEVELOPER_GUIDE.md
+   - Documented all workflows
+   - Added code examples
+   - Updated memory bank
 
-2. **Expert Prompts Library** (Phase 4)
-   - Code review prompts
-   - Architecture design prompts
-   - Security audit prompts
+2. **Example Applications**
+   - Enhance portfolio-management-system documentation
+   - Document stripe-crypto-onramp setup
+   - Create more end-to-end examples
 
-3. **Testing Infrastructure** (Phase 6)
-   - Unit test suite
-   - Integration tests
-   - E2E workflow tests
+3. **Testing Infrastructure**
+   - Unit tests for Skills
+   - Unit tests for MCPs
+   - Integration tests for workflows
+   - Framework-level tests
 
 ### Short-term Goals (Next 2-4 Weeks)
 
-- Complete Phase 3 (all 15 boilerplates)
-- Start Phase 4 (expert prompts)
-- Begin testing infrastructure
-- Improve documentation with examples
+- Complete testing infrastructure
+- Add more example applications
+- Create video tutorials (optional)
+- Community documentation (contributing guide)
 
 ### Long-term Goals (Next 2-3 Months)
 
-- Complete all phases (1-7)
-- Comprehensive test coverage
-- Plugin system implementation
-- Web UI interface
-- CI/CD integration examples
+- Web UI for visual workflow design
+- Plugin system for custom extensions
+- CI/CD integration templates
+- Performance monitoring and optimization
+- Multi-language support (TypeScript SDK)
 
 ## Current Blockers
 
@@ -171,8 +193,9 @@
 
 ## Next Session Focus
 
-1. **Boilerplate Creation**: Focus on high-priority templates
-2. **Documentation**: Add more usage examples
-3. **Testing**: Begin unit test implementation
-4. **Memory Bank**: This initialization (complete)
+1. **Testing Infrastructure**: Implement unit and integration tests
+2. **Example Applications**: Document existing examples thoroughly
+3. **Community Tools**: Contributing guide, issue templates
+4. **Performance**: Benchmark and optimize execution engine
+5. **Advanced Features**: Begin Web UI planning (future phase)
 

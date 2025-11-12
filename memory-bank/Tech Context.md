@@ -44,29 +44,35 @@ wheel>=0.41.0           # Package distribution
 ### External Integrations
 
 **MCPs (Model Context Protocol):**
-- MongoDB (via Docker)
-- Stripe (via Docker)
-- Notion (via Docker)
-- Airtable (API key required)
-- HubSpot (API key required)
-- Filesystem (local)
-- Chrome Control (local)
-- Mac Control (local)
-- Beeper Desktop (local)
-- Context7 (API)
-- YouTube (via Docker)
-- Web Search/Fetch (APIs)
+
+Configuration via `.mcp.json`:
+- MongoDB: Database operations (Docker container)
+- Stripe: Payment processing (Docker container)
+- Notion: Workspace & page management (Docker container)
+- Airtable: Spreadsheet database (API)
+- HubSpot: CRM operations (API)
+- Context7: Documentation retrieval (API)
+- YouTube: Video transcripts (Docker container)
+- Web Search/Fetch: Internet content (API)
+- Filesystem: Local file operations
+- Chrome Control: Browser automation (local)
+- Mac Control: macOS automation (local)
+- Beeper: Desktop messaging (local)
+
+All MCPs are configured in `.mcp.json` with server definitions and capabilities.
 
 **Skills:**
-- Located at `/mnt/skills/` (public and examples)
-- Document skills: docx, pdf, pptx, xlsx
-- Web skills: artifacts-builder
-- Design skills: theme-factory, canvas-design
-- Dev skills: mcp-builder, skill-creator
-- AI/ML skills: ml-model-deployer, data-analyzer
-- Testing: test-generator
-- DevOps: docker-composer, ci-cd-builder
-- Database: database-modeler
+- Located at `./skills/` (local directory)
+- Implementation:
+  - stripe: Stripe payment integration
+  - postgresql: PostgreSQL database operations
+  - redis: Redis caching and data structures
+- Legacy reference at `/mnt/skills/` (public and examples)
+- Skill structure:
+  - SKILL.md: Comprehensive documentation
+  - adapter.py: Python implementation
+  - templates/: Optional code templates
+  - examples/: Usage examples
 
 **Context7 Libraries (100+ mappings):**
 - Frontend: React, Next.js, Vue, Svelte, Angular
